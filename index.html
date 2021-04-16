@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,19 +20,21 @@
                 </div>
                 
                 <nav class="nav">
-                    <a class="nav__link" href="#">Привет</a>
-                    <a class="nav__link" href="#">О нас</a>
-                    <a class="nav__link" href="#">Услуги</a>
-                    <a class="nav__link" href="#">Портфолио</a>
-                    <a class="nav__link" href="#">Цены</a>
-                    <a class="nav__link" href="#">Блог</a>
-                    <a class="nav__link" href="#">Контакты</a>
-                    <a class="nav__link" href="#">
+                    <a class="nav__link none" href="#">Привет</a>
+                    <a class="nav__link none" href="#">О нас</a>
+                    <a class="nav__link none" href="#">Услуги</a>
+                    <a class="nav__link none" href="#">Портфолио</a>
+                    <a class="nav__link none" href="#">Цены</a>
+                    <a class="nav__link none" href="#">Блог</a>
+                    <a class="nav__link none" href="#">Контакты</a>
+                    <a class="nav__link none_i" href="#">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
-                    <a class="nav__link" href="#">
+                    <a class="nav__link none_i" href="#">
                         <i class="fas fa-search"></i>
                     </a>
+
+                    <a class="nav__link brg__menu" href="#"><i class="fas fa-bars"></i></a>
                 </nav>
             </div>
         </div>
@@ -178,7 +180,7 @@
         <!-- Featuredwork -->
         <section class="section">
             <div class="section__header p-100">
-                <h2 class="section__title">Предлагаемые работы</h2>
+                <h2 class="section__title_otherLine">Предлагаемые работы</h2>
                 
                 <div class="section__text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.</p>
@@ -347,7 +349,7 @@
             <div class="container">
                 <div class="ourskill__inner">
                     <div class="ourskill__info">
-                        <h2 class="info__title">Наше мастерство</h2>
+                        <h2 class="info__title_other">Наше мастерство</h2>
 
                         <p class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est.</p>
                     </div>
@@ -417,7 +419,7 @@
                 <h2 class="ourtestim__title">Наши отзывы</h2>
                 
                 <div class="ourtestim__testimoinal">
-                    <p class="testimoinal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis.</p>
+                    <p class="testimoinal__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis."</p>
 
                     <h3 class="testimoinal__author">Кавасаки Мидзу - Fromsoftware</h3>
                     
@@ -436,8 +438,12 @@
                     <div class="circle__right">
                         <i class="far fa-circle"></i>
                     </div>
-                </div>
 
+                    <div class="slider">
+                        <i class="fas fa-circle"></i>
+                        <i class="far fa-circle"></i>
+                    </div>
+                </div>
             </div>
         </div><!-- !.Ourtestim -->
 
@@ -626,5 +632,8 @@
         </footer>
 
     </div><!-- !.Page -->
+
+    <script src="js/app.js"></script>
+
 </body>
 </html>
