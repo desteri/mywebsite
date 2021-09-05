@@ -11,6 +11,40 @@
 <body>
     <!-- Header -->
     <header class="header">
+        <!-- <div class="pulldown">
+            <p>Разные страницы</p>
+            <ul class="pulldown__list">
+                <li>О нас</li>
+                <li>Услуги</li>
+                <li>Блог</li>
+                <li>Портфолио</li>
+                <li>Контакты</li>
+            </ul>
+            
+            <p>Дополнительные ссылки</p>
+            <ul class="pulldown__list">
+                <li>Игры</li>
+                <li>Игровые движки</li>
+                <li>Другие программы</li>
+                <li>Сотрудники</li>
+                <li>Партнеры</li>
+            </ul>
+        </div> -->
+
+        <div class="search">
+            <div class="container">
+                <div class="search__inner">
+                    <span><i class="fas fa-search"></i></span>
+
+                    <form action="#" method="GET">
+                        <input type="text" placeholder="Поиск">
+                    </form>
+    
+                    <span class="search__close"><i class="fas fa-times"></i></span>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">
@@ -20,21 +54,109 @@
                 </div>
                 
                 <nav class="nav">
-                    <a class="nav__link none" href="#">Привет</a>
-                    <a class="nav__link none" href="#">О нас</a>
-                    <a class="nav__link none" href="#">Услуги</a>
-                    <a class="nav__link none" href="#">Портфолио</a>
-                    <a class="nav__link none" href="#">Цены</a>
-                    <a class="nav__link none" href="#">Блог</a>
-                    <a class="nav__link none" href="#">Контакты</a>
-                    <a class="nav__link none_i" href="#">
-                        <i class="fas fa-shopping-bag"></i>
-                    </a>
-                    <a class="nav__link none_i" href="#">
-                        <i class="fas fa-search"></i>
-                    </a>
+                    <ul>
+                        <li class="nav__link none">
+                            <a href="#">Привет</a>
+                        </li>
 
-                    <a class="nav__link brg__menu" href="#"><i class="fas fa-bars"></i></a>
+                        <li class="nav__link none">
+                            <a  href="#">О нас</a>
+                        </li>
+
+                        <li class="nav__link none">
+                            <a href="#">Услуги</a>
+                        </li>
+
+                        <li class="nav__link none">
+                            <a href="#">Портфолио</a>
+                        </li>
+
+                        <li class="nav__link none">
+                            <a href="#">Цены</a>
+                        </li>
+
+                        <li class="nav__link none">
+                            <a href="#">Блог</a>
+                        </li>
+
+                        <li class="nav__link none">
+                            <a href="#">Контакты</a>
+                        </li>
+
+                        <li class="nav__link shop__hover none_i">
+                            <a href="#">
+                                <i class="fas fa-shopping-bag"></i>
+                                
+                                <span class="shop__count">3</span>
+                            </a>
+                            <div class="shop__card shop__dropdown">
+                                <div class="card__item">
+                                    <div class="card__img">
+                                        <img src="img/other/card__product.jpg" alt="">
+                                    </div>
+        
+                                    <div class="card__text">
+                                        <p class="card__title">Название продукта</p>
+                                        
+                                        <p class="card__price">
+                                            <span>2X - </span>
+                                            <span>$59.99</span>
+                                            <span><i class="fas fa-trash"></i></span>
+                                        </p>
+                                    </div>
+                                </div>
+        
+                                <div class="card__item">
+                                    <div class="card__img">
+                                        <img src="img/other/card__product.jpg" alt="">
+                                    </div>
+        
+                                    <div class="card__text">
+                                        <p class="card__title">Название продукта</p>
+                                        
+                                        <p class="card__price">
+                                            <span>2X - </span>
+                                            <span>$59.99</span>
+                                            <span><i class="fas fa-trash"></i></span>
+                                        </p>
+                                    </div>
+                                </div>
+        
+                                <div class="card__item">
+                                    <div class="card__img">
+                                        <img src="img/other/card__product.jpg" alt="">
+                                    </div>
+        
+                                    <div class="card__text">
+                                        <p class="card__title">Название продукта</p>
+                                        
+                                        <p class="card__price">
+                                            <span>2X - </span>
+                                            <span>$59.99</span>
+                                            <span><i class="fas fa-trash"></i></span>
+                                        </p>
+                                    </div>
+                                </div>
+        
+                                <div class="card__total">
+                                    <a class="card__btn" href="#">Card</a>
+                                    <div class="total__price">
+                                        <p><span>Всего:</span><span> $0.00</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li  class="nav__link none_i">
+                            <a href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+
+                        <li  class="nav__link brg__menu">
+                            <a href="#"><i class="fas fa-bars"></i></a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -81,7 +203,7 @@
                                 </div>
                             </div>
                         
-                            <div class="accordion__item active">
+                            <div class="accordion__item">
                                 <div class="accordion__header">
                                     <div class="arrow"><i class="fas fa-chevron-right"></i></div>
                                     
@@ -171,11 +293,21 @@
             </div>
         </div><!-- !.More__about -->
 
-        <!-- Prevideo -->
-        <div class="prevideo">
-            <a href="#"><i class="far fa-play-circle"></i></a>
-        </div>
-        <!-- !.Prevideo -->
+        <!-- Video -->
+        <!-- <div class="video">
+            <div class="overlay">
+                <span class="close">x</span>
+            </div>
+    
+            <div class="video__frame">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/UPYYHTjw-fY?enablejsapi=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+    
+            <div class="video__play">
+                <a href="#"><i class="far fa-play-circle"></i></a>
+            </div>
+        </div> -->
+        <!-- !.Video -->
 
         <!-- Featuredwork -->
         <section class="section">
@@ -188,6 +320,62 @@
             </div>
             
             <div class="featuredwork">
+                <div class="overlay">
+                    <span class="close">x</span>
+                </div>
+
+                <div class="work__modal">
+                    <div class="work__image">
+                        <img src="img/other/work_1.jpg" alt="">
+                        
+                        <div class="context">
+                            <h3>Naruto Shippuden Ultimate Ninja Storm 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.</p>
+                        </div>
+                    </div>
+
+                    <div class="work__image">
+                        <img src="img/other/work_2.jpg" alt="">
+
+                        <div class="context">
+                            <h3>Red Dead Redemption II</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.</p>
+                        </div>
+                    </div>
+
+                    <div class="work__image">
+                        <img src="img/other/work_3.jpg" alt="">
+
+                        <div class="context">
+                            <h3>DOOM</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.</p>
+                        </div>
+                    </div>
+
+                    <div class="work__image">
+                        <img src="img/other/work_4.jpg" alt="">
+                        
+                        <div class="context">
+                            <h3>Sekiro: Shadow Die Twice</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.</p>
+                        </div>
+                    </div>
+
+                    <div class="work__image">
+                        <img src="img/other/work_5.png" alt="">
+                        
+                        <div class="context">
+                            <h3>Firewatch</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.</p>
+                        </div>
+                    </div>
+
+                    <div class="circle__left">
+                    </div>
+                    <div class="circle__right">
+                    </div>
+                </div>
+
                 <div class="plus">
                     <i class="fas fa-plus"></i>
                 </div>
@@ -213,6 +401,7 @@
                         <img src="img/other/work_5.png" alt="">
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -294,51 +483,236 @@
 
             <div class="ourportfolio pb-100">
                 <div class="container">
-                    <div class="portfolio">
-                        <div class="portfolio__item">
+                    <div class="overlay">
+                        <span class="close">x</span>
+                    </div>
+    
+                    <div class="portfolio__modal">
+                        <div class="portfolio__image prtf__img_one">
                             <img src="img/other/portfolio_1.jpg" alt="">
                         </div>
 
-                        <div class="portfolio__item">
+                        <div class="portfolio__image prtf__img_two">
                             <img src="img/other/portfolio_2.jpg" alt="">
                         </div>
 
-                        <div class="portfolio__item">
+                        <div class="portfolio__image prtf__img_three">
                             <img src="img/other/portfolio_3.png" alt="">
                         </div>
 
-                        <div class="portfolio__item">
+                        <div class="portfolio__image prtf__img_four">
                             <img src="img/other/portfolio_4.jpg" alt="">
                         </div>
 
-                        <div class="portfolio__item">
+                        <div class="portfolio__image prtf__img_five">
                             <img src="img/other/portfolio_5.jpg" alt="">
                         </div>
 
-                        <div class="portfolio__item">
+                        <div class="portfolio__image prtf__img_six">
                             <img src="img/other/portfolio_6.jpg" alt="">
                         </div>
 
-                        <div class="portfolio__item">
+                        <div class="portfolio__image prtf__img_seven">
                             <img src="img/other/portfolio_7.jpg" alt="">
                         </div>
 
-                        <div class="portfolio__item">
+                        <div class="portfolio__image prtf__img_eight">
                             <img src="img/other/portfolio_8.jpg" alt="">
                         </div>
+                    </div>
 
-                        <!-- Make "portfolio__info:hover" on images -->
+                    <div class="portfolio">
+                        <div class="portfolio__item prtf__one">
+                            <div class="portfolio__over"></div>
 
-                        <!-- <div class="portfolio__info">
-                            <h3 class="portfolio__title">Название</h3>
-                            <div class="portfolio__text">
-                                <p>Lorem ipsum dolor sit amet</p>
+                            <img src="img/other/portfolio_1.jpg" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="potrfolio__icon">
-                                <i class="fas fa-expand-alt"></i>
-                                <i class="fas fa-search"></i>
+                        </div>
+
+                        <div class="portfolio__item prtf__two">
+                            <div class="portfolio__over"></div>
+
+                            <img src="img/other/portfolio_2.jpg" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div> -->
+                        </div>
+
+                        <div class="portfolio__item prtf__three">
+                            <div class="portfolio__over"></div>
+
+                            <img src="img/other/portfolio_3.png" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__item prtf__four">
+                            <div class="portfolio__over"></div>
+
+                            <img src="img/other/portfolio_4.jpg" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__item prtf__five">
+                            <div class="portfolio__over"></div>
+
+                            <img src="img/other/portfolio_5.jpg" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__item prtf__six">
+                            <div class="portfolio__over"></div>
+
+                            <img src="img/other/portfolio_6.jpg" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__item prtf__seven">
+                            <div class="portfolio__over"></div>
+
+                            <img src="img/other/portfolio_7.jpg" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__item prtf__eight">
+                            <div class="portfolio__over"></div>
+
+                            <img src="img/other/portfolio_8.jpg" alt="">
+
+                            <div class="portfolio__info">
+                                <h3 class="portfolio__title">НАЗВАНИЕ</h3>
+
+                                <div class="portfolio__text">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                </div>
+
+                                <div class="portfolio__icon">
+                                    <div class="circle__one">
+                                        <i class="fas fa-expand-alt"></i>
+                                    </div>
+                                    
+                                    <div class="circle__two">
+                                        <a href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -418,31 +792,42 @@
             <div class="ourtestim__inner">
                 <h2 class="ourtestim__title">Наши отзывы</h2>
                 
-                <div class="ourtestim__testimoinal">
-                    <p class="testimoinal__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis."</p>
+                <div class="ourtestim__testimonial">
+                    <p class="testimonial__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis."</p>
 
-                    <h3 class="testimoinal__author">Кавасаки Мидзу - Fromsoftware</h3>
+                    <h3 class="testimonial__author">Кавасаки Мидзу - FromSoftware</h3>
                     
-                    <div class="testimoinal__stars">
+                    <div class="testimonial__stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
+                </div>
 
-                    <div class="circle__left">
-                        <i class="far fa-circle"></i>
-                    </div>
+                <div class="ourtestim__testimonial">
+                    <p class="testimonial__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique nulla aliquet enim tortor at auctor urna. Id leo in vitae turpis massa sed elementum tempus. Aliquet nec ullamcorper sit amet risus nullam eget. Imperdiet dui accumsan sit amet nulla. Nisi porta lorem mollis aliquam ut. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Quis auctor elit sed vulputate mi sit amet mauris. Viverra accumsan in nisl nisi scelerisque."</p>
 
-                    <div class="circle__right">
-                        <i class="far fa-circle"></i>
+                    <h3 class="testimonial__author">Тодд Говард - Bethesda Game Studios</h3>
+                    
+                    <div class="testimonial__stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
+                </div>
 
-                    <div class="slider">
-                        <i class="fas fa-circle"></i>
-                        <i class="far fa-circle"></i>
-                    </div>
+                <div class="circle__left">
+                </div>
+                <div class="circle__right">
+                </div>
+
+                <div class="slider">
+                    <i class="fas fa-circle"></i>
+                    <i class="far fa-circle"></i>
                 </div>
             </div>
         </div><!-- !.Ourtestim -->
@@ -538,7 +923,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 </div>
 
-                <form action="#" method="POST"><input type="text" placeholder="Email Почта"><a href="#" class="btn">Подписаться</a></form>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Email Почта">
+
+                    <a href="#" class="btn">Подписаться</a>
+                </form>
             </div>
         </div>
         <!-- !.Subscribeus -->
@@ -558,9 +947,14 @@
                     <div class="blogs">
                         <div class="blogs__item">
                             <div class="blogs__img">
-                                <img src="img/other/blogs_1.jpg" alt="">
+                                <a href="#">
+                                    <img src="img/other/blogs_1.jpg" alt="">
+                                </a>
                             </div>
-                            <h3 class="blogs__title">Ежегодное конференц-собрание</h3>
+
+                            <h3 class="blogs__title">
+                                <a href="#">Ежегодное конференц-собрание</a>
+                            </h3>
 
                             <div class="blogs__text">
                                 <p>25 Августа, 2020 / Руководство</p>
@@ -569,9 +963,13 @@
 
                         <div class="blogs__item">
                             <div class="blogs__img">
-                                <img src="img/other/blogs_2.jpg" alt="">
+                                <a href="#">
+                                    <img src="img/other/blogs_2.jpg" alt="">
+                                </a>
                             </div>
-                            <h3 class="blogs__title">Кинематография в движках</h3>
+                            <h3 class="blogs__title">
+                                <a href="#">Кинематография в движках</a>
+                            </h3>
 
                             <div class="blogs__text">
                                 <p>14 Октября, 2020 / CG-команда</p>
@@ -580,9 +978,13 @@
 
                         <div class="blogs__item">
                             <div class="blogs__img">
-                                <img src="img/other/blogs_3.png" alt="">
+                                <a href="#">
+                                    <img src="img/other/blogs_3.png" alt="">
+                                </a>
                             </div>
-                            <h3 class="blogs__title">Обновления и перезапуск игр</h3>
+                            <h3 class="blogs__title">
+                                <a href="#">Обновления и перезапуск игр</a>
+                            </h3>
 
                             <div class="blogs__text">
                                 <p>1 Декабря, 2020 / Команда IT</p>
@@ -596,6 +998,8 @@
          <!-- Map -->
          <div class="map">
             <a href="#">Найдите нас на карте<i class="fas fa-circle"></i></a>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1462.0801538203916!2d74.60282445825494!3d42.869460460595896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7d022ff777d%3A0x6def27c66bd6c89c!2z0JHQuNC30L3QtdGBLdGG0LXQvdGC0YAgItCg0L7RgdGB0LjRjyI!5e0!3m2!1sru!2sus!4v1630697519339!5m2!1sru!2sus" width="1910" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <!-- !.Map -->
 
