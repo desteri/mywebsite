@@ -34,26 +34,6 @@ function search() {
 
 search();
 
-function navMenu() {
-
-    'use strict';
-
-    let header = document.querySelector('.header');
-    let intro = document.querySelector('.intro');
-    let scrollOffset = window.screenTop;
-    
-    window.addEventListener('scroll', () => {
-        
-        if (header.scrollHeight == "300px") {
-            header.classList.add('header__fixed');
-        }
-
-    });
-
-}
-
-navMenu();
-
 function accordion() {
     
     'use strict';
@@ -83,37 +63,37 @@ function accordion() {
 
 accordion();
 
-// function getVideo() {
+function getVideo() {
 
-//     'use strict';
+    'use strict';
     
-//     let clickPlay = document.querySelector('.video__play a');
-//     let video = document.querySelector('.video__frame');
-//     let iframe = document.getElementsByTagName('iframe')[0].contentWindow;
+    let clickPlay = document.querySelector('.video__play a');
+    let video = document.querySelector('.video__frame');
+    let iframe = document.getElementsByTagName('iframe')[0].contentWindow;
 
-//     clickPlay.addEventListener('click', (event) => {
+    clickPlay.addEventListener('click', (event) => {
 
-//         event.preventDefault();        
+        event.preventDefault();        
 
-//         video.style.display = 'block';
-//         overlay.style.display = 'block';
+        video.style.display = 'block';
+        overlay.style.display = 'block';
 
-//     });
+    });
 
-//     closeX.addEventListener('click', (event) => {
+    closeX.addEventListener('click', (event) => {
 
-//         event.preventDefault();
+        event.preventDefault();
 
-//         video.style.display = 'none';
-//         overlay.style.display = 'none';
+        video.style.display = 'none';
+        overlay.style.display = 'none';
 
-//         iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
+        iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
 
-//     });
+    });
 
-// }
+}
 
-// getVideo();
+getVideo();
 
 function getWorks() {
     
