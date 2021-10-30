@@ -1,38 +1,46 @@
 let overlay = document.querySelector('.overlay');
 let closeX = document.querySelector('.overlay .close');
 
-function search() {
+function navMenu() {
 
     'use strict';
     
     let searchIcon = document.querySelector('.nav__link a .fa-search');
     let searchClose = document.querySelector('.search__inner .search__close');
     let searchHide = document.querySelector('.search');
+    let shop = document.querySelector('.shop__hover a');
+    let header = document.querySelector('.header');
 
-    let close = (event) => {
-
+    shop.addEventListener('click', (event) => {
         event.preventDefault();
-        
-        if(event.target == searchIcon) {
+    });
 
-            searchHide.style.display = 'block';
+    searchClose.addEventListener('click', (event) => {
+        event.preventDefault();
+        searchHide.style.display = "none";
+    });
+
+    searchIcon.addEventListener('click', (event) => {
+        event.preventDefault();
+        searchHide.style.display = "block";
+    });
+    
+    window.addEventListener('scroll', () => {
+        
+        if (document.body.scrollTop > 50 || 
+            document.documentElement.scrollTop > 50) {
+            header.classList.add('header__fixed');
+            
 
         } else {
-
-            searchHide.style.display = 'none';
-
+            header.classList.remove('header__fixed');
         }
 
-        
-
-    };
-
-    searchClose.addEventListener('click', close);
-    searchIcon.addEventListener('click', close);
+    });
 
 }
 
-search();
+navMenu();
 
 function accordion() {
     
@@ -398,11 +406,16 @@ function getSub() {
     'use strict';
 
     let sub = document.querySelector('.subscribeus__inner form a');
+    let subInput = document.querySelector('.subscribeus__inner form input');
 
     sub.addEventListener('click', (event) => {
         event.preventDefault();
 
-        alert('Подписка оформлена!');
+        if (subInput.value !== "") {
+            alert('Подписка оформлена!');
+        } else {
+            alert('Заполните поля!');
+        }
     });
 
 }
@@ -453,12 +466,21 @@ function getPost() {
     'use strict';
 
     let post = document.querySelector('.infiniti__inner form a');
+    let postInputName = document.querySelector('.infiniti__inner form #name');
+    let postInputTel = document.querySelector('.infiniti__inner form #tel');
+    let postTextArea = document.querySelector('.infiniti__inner form textarea'); 
 
     post.addEventListener('click', (event) => {
 
         event.preventDefault();
 
-        alert('Сообщение отправлено!');
+        if (postInputName.value !== "" &&
+         postInputTel.value !== "" &&
+         postTextArea.value !== "") {
+            alert('Сообщение отправлено!');
+        } else {
+            alert('Заполните поля!');
+        }
 
     });
 

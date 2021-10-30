@@ -118,7 +118,12 @@ a {
 =====================*/
 .search {
     display: none;
+    width: 675px;
     background-color: #333;
+    position: absolute;
+    top: 22px;
+    right: 378px;
+    transition: .5s linear;
 }
 
 .search__inner {
@@ -130,7 +135,7 @@ a {
 }
 
 .search__inner form {
-    width: 95%;
+    width: 93%;
 }
 
 .search__inner form input {
@@ -1664,7 +1669,7 @@ progress::-webkit-progress-value {
 }
 
 .infiniti__inner form input:nth-child(2) {
-    margin-left: 26px;
+    margin-left: 25px;
 }
 
 .infiniti__inner form textarea {
