@@ -312,7 +312,7 @@ ul {
     height: 822px;
     padding-top: 380px;
 
-    background: #31344e url(../img/other/background.jpg) center no-repeat;
+    background: #31344e url(../img/header/bg.png) center no-repeat;
     background-size: cover;
 }
 
@@ -580,8 +580,9 @@ ul {
 
 .video__play {
     height: 280px;
-    background: #31344e url(../img/other/prevideo.jpg) center no-repeat;
+    background: #31344e url(../img/video/video.png) center no-repeat;
     background-size: cover;
+    background-position: center -40px;
     text-align: center;
     line-height: 3;
     font-size: 100px;
@@ -829,8 +830,9 @@ ul {
 =====================*/
 .hireus__inner {
     height: 400px;
-    background: #31344e url(../img/other/hireus.jpg) center no-repeat;
+    background: #31344e url(../img/hire/hire.png) center no-repeat;
     background-size: cover;
+    background-position: center -250px;
     text-align: center;
     position: relative;
 }
@@ -1192,8 +1194,9 @@ progress::-webkit-progress-value {
 =====================*/
 .ourtestim__inner {
     height: 500px;
-    background: #31344e url(../img/other/ourtestim.jpg) center no-repeat;
+    background: #31344e url(../img/reviews/reviews.png) center no-repeat;
     background-size: cover;
+    background-position: center -130px;
     text-align: center;
     position: relative;
 }
@@ -1465,7 +1468,7 @@ progress::-webkit-progress-value {
 =====================*/
 .subscribeus__inner {
     height: 400px;
-    background: #31344e url(../img/other/subscribeus.jpg) center no-repeat;
+    background: #31344e url(../img/subscribe/subscribe.png) center no-repeat;
     background-size: cover;
     text-align: center;
     position: relative;
@@ -1572,7 +1575,7 @@ progress::-webkit-progress-value {
 =====================*/
 .map {
     height: 240px;
-    background: #31344e url(../img/other/map.jpg) center no-repeat;
+    background: #31344e url(../img/map/map.png) center no-repeat;
     background-size: cover;
     text-align: center;
     position: relative;
