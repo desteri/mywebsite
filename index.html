@@ -9,20 +9,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,300;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <nav>
+            <nav class="flex aic">
                 <a class="logo" href="#">Infiniti</a>
 
-                <button class="burger" type="button">
+                <label class="burger" for="burger">
+                    <input class="check" type="checkbox" id="burger">
                     <i class="fas fa-bars"></i>
-                </button>
+                </label>
 
-                <ul>
+                <ul class="navbar flex">
                     <li class="nav__item">
                         <a class="nav__link" href="#about">О нас</a>
                     </li>
@@ -69,7 +71,7 @@
                                 </p>
                             </div>
 
-                            <div class="shop__footer">
+                            <div class="shop__footer flex aic">
                                 <a class="shop__btn" href="#">Check</a>
                                 <p class="shop__total">
                                     <span>Всего:</span> <span>$9497</span>
@@ -81,35 +83,36 @@
             </nav>
         </div>
 
-        <!-- <div class="pulldown">
-            <ul class="pulldown__list">
-                <li>
-                    <a class="nav__link" href="#about">О нас</a>
+        <nav class="sidebar flex">
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#about">О нас</a>
                 </li>
-                <li>
-                    <a class="nav__link" href="#services">Услуги</a>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#services">Услуги</a>
                 </li>
-                <li>
-                    <a class="nav__link" href="#portfolio">Портфолио</a>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#portfolio">Портфолио</a>
                 </li>
-                <li>
-                    <a class="nav__link" href="#price">Цены</a>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#price">Цены</a>
                 </li>
-                <li>
-                    <a class="nav__link" href="#blogs">Блог</a>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#blogs">Блог</a>
                 </li>
-                <li>
-                    <a class="nav__link" href="#contacts">Контакты</a>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#contacts">Контакты</a>
                 </li>
-                <li>
-                    <a class="nav__link" href="#">
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#">
                         <i class="fas fa-shopping-bag"></i>
-
                         <span class="shop__count">3</span>
                     </a>
                 </li>
             </ul>
-        </div> -->
+
+            <button class="sidebar__cross" type="button"><i class="fas fa-times"></i></button>
+        </nav>
     </header>
 
     <section class="intro" id="intro">
@@ -140,8 +143,8 @@
                         <a class="btn fully" href="#price">Заказать</a>
                     </div>
 
-                    <div class="about__accordion">
-                        <div class="accordion__item">
+                    <ul class="about__accordion">
+                        <li class="accordion__item">
                             <div class="accordion__header">
                                 <div class="accordion__arrow">
                                     <i class="fas fa-chevron-right"></i>
@@ -154,9 +157,9 @@
                                 incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi
                                 bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus
                                 turpis in eu mi bibendum neque egestas.</p>
-                        </div>
+                        </li>
 
-                        <div class="accordion__item">
+                        <li class="accordion__item">
                             <div class="accordion__header">
                                 <div class="accordion__arrow">
                                     <i class="fas fa-chevron-right"></i>
@@ -169,9 +172,9 @@
                                 incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi
                                 bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus
                                 turpis in eu mi bibendum neque egestas.</p>
-                        </div>
+                        </li>
 
-                        <div class="accordion__item">
+                        <li class="accordion__item">
                             <div class="accordion__header">
                                 <div class="accordion__arrow">
                                     <i class="fas fa-chevron-right"></i>
@@ -184,9 +187,9 @@
                                 incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi
                                 bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus
                                 turpis in eu mi bibendum neque egestas.</p>
-                        </div>
+                        </li>
 
-                        <div class="accordion__item">
+                        <li class="accordion__item">
                             <div class="accordion__header">
                                 <div class="accordion__arrow">
                                     <i class="fas fa-chevron-right"></i>
@@ -199,16 +202,16 @@
                                 incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi
                                 bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus
                                 turpis in eu mi bibendum neque egestas.</p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section class="moreabout mtb">
             <div class="container">
-                <div class="moreabout__content flex">
-                    <div class="moreabout__item">
+                <ul class="moreabout__content flex">
+                    <li class="moreabout__item">
                         <div class="moreabout__header">
                             <div class="icon__circle">
                                 <i class="far fa-compass"></i>
@@ -221,9 +224,9 @@
                             eiusmod tempor incididunt
                             ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.
                         </p>
-                    </div>
+                    </li>
 
-                    <div class="moreabout__item">
+                    <li class="moreabout__item">
                         <div class="moreabout__header">
                             <div class="icon__circle">
                                 <i class="fas fa-comment"></i>
@@ -236,9 +239,9 @@
                             eiusmod tempor incididunt
                             ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.
                         </p>
-                    </div>
+                    </li>
 
-                    <div class="moreabout__item">
+                    <li class="moreabout__item">
                         <div class="moreabout__header">
                             <div class="icon__circle">
                                 <i class="fas fa-heart"></i>
@@ -251,19 +254,21 @@
                             eiusmod tempor incididunt
                             ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas.
                         </p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section class="video">
             <div class="overlay"></div>
 
-            <div class="video__content">
-                <a class="video__link" href="#"><i class="far fa-play-circle"></i></a>
+            <div class="container">
+                <div class="video__content">
+                    <a class="video__link" href="#"><i class="far fa-play-circle"></i></a>
 
-                <iframe width="1280" height="720" src="https://www.youtube.com/embed/UPYYHTjw-fY?enablejsapi=1"
-                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/UPYYHTjw-fY?enablejsapi=1"
+                        title="YouTube video player" frameborder="0" allowfullscreen></iframe> -->
+                </div>
             </div>
         </section>
 
@@ -277,63 +282,63 @@
                 </div>
             </div>
 
-            <div class="works__content flex mt">
-                <div class="works__item">
+            <ul class="works__content flex mt">
+                <li class="works__item">
                     <img src="./img/works/Small/work_2pngS.png" alt="service">
 
                     <div class="overlay">
                         <a class="works__link" href="#"><i class="fas fa-search"></i></a>
                     </div>
-                </div>
+                </li>
 
-                <div class="works__item">
+                <li class="works__item">
                     <img src="./img/works/Small/work_3pngS.png" alt="service">
 
                     <div class="overlay">
                         <a class="works__link" href="#"><i class="fas fa-search"></i></a>
                     </div>
-                </div>
+                </li>
 
-                <div class="works__item">
+                <li class="works__item">
                     <img src="./img/works/Small/work_4pngS.png" alt="service">
 
                     <div class="overlay">
                         <a class="works__link" href="#"><i class="fas fa-search"></i></a>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
 
         <section class="services mb pt" id="services">
             <div class="container">
-                <div class="services__content flex">
-                    <div class="services__item">
+                <ul class="services__content flex">
+                    <li class="services__item">
                         <i class="fas fa-lightbulb"></i>
                         <h3 class="services__title">Разработка с нуля</h3>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor
                             incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
+                    </li>
 
-                    <div class="services__item">
+                    <li class="services__item">
                         <i class="fas fa-desktop"></i>
                         <h3 class="services__title">Исходный код</h3>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor
                             incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
+                    </li>
 
-                    <div class="services__item">
+                    <li class="services__item">
                         <i class="fas fa-sync-alt"></i>
                         <h3 class="services__title">Сопровождение</h3>
                         <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor
                             incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -360,181 +365,193 @@
                         dolor neque dicta magni ratione delectus debitis odio.</p>
                 </div>
 
-                <div class="portfolio__content flex mt">
-                    <div class="portfolio__item">
+                <ul class="portfolio__content flex mt">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_1.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
-
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
+    
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_2.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
-
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
+    
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_3.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_4.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_5.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_6.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_7.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_8.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_9.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_10.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_11.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
 
-                    <div class="portfolio__item">
+                    <li class="portfolio__item">
                         <img src="./img/portfolio/Small/portfolioS_12.png" alt="work">
 
                         <div class="overlay">
-                            <h3 class="portfolio__title">Название продукта</h3>
-                            <p class="portfolio__text">Lorem ipsum dolor sit amet</p>
+                            <div class="overlay__content">
+                                <h3 class="portfolio__title">Название продукта</h3>
 
-                            <div class="portfolio__icon">
-                                <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
-                                <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                <div class="portfolio__icon">
+                                    <a class="portfolio__link" href="#"><i class="fas fa-expand-alt"></i></a>
+                                    <a class="portfolio__link" href="#"><i class="fas fa-search"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section class="skills mtb">
             <div class="container">
-                <div class="skills__content flex">
+                <div class="skills__content flex aic">
                     <div class="skills__info">
                         <h2 class="skills__title">Наше мастерство</h2>
                         <p class="skills__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -548,60 +565,69 @@
                             eget est.</p>
                     </div>
 
-                    <div class="skills__progress">
-                        <div class="progress__item">
-                            <h3 class="progress__title">Идея</h3>
-                            <progress class="progress" value="80" max="100"></progress>
-                        </div>
+                    <ul class="skills__meter">
+                        <li class="meter__item">
+                            <h3 class="meter__title">Идея</h3>
+                            <ul class="meter flex">
+                                <li class="meter__fill one"></li>
+                                <li class="meter__full two"></li>
+                            </ul>
+                        </li>
 
-                        <div class="progress__item">
-                            <h3 class="progress__title">Дизайн</h3>
-                            <progress class="progress" value="60" max="100"></progress>
-                        </div>
+                        <li class="meter__item">
+                            <h3 class="meter__title">Дизайн</h3>
+                            <ul class="meter flex">
+                                <li class="meter__fill three"></li>
+                                <li class="meter__full four"></li>
+                            </ul>
+                        </li>
 
-                        <div class="progress__item">
-                            <h3 class="progress__title">Код</h3>
-                            <progress class="progress" value="90" max="100"></progress>
-                        </div>
-                    </div>
+                        <li class="meter__item">
+                            <h3 class="meter__title">Код</h3>
+                            <ul class="meter flex">
+                                <li class="meter__fill five"></li>
+                                <li class="meter__full six"></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="achive mtb">
+        <section class="achive mtb pt">
             <div class="container">
-                <div class="achive__content flex">
-                    <div class="achive__item">
+                <ul class="achive__content flex">
+                    <li class="achive__item">
                         <span class="achive__number">27</span>
                         <p class="achive__text">Завершенных проектов</p>
-                    </div>
+                    </li>
 
-                    <div class="achive__item">
+                    <li class="achive__item">
                         <span class="achive__number">198</span>
                         <p class="achive__text">Счастливых клиентов</p>
-                    </div>
+                    </li>
 
-                    <div class="achive__item">
+                    <li class="achive__item">
                         <span class="achive__number">3654</span>
                         <p class="achive__text">Часов работ</p>
-                    </div>
+                    </li>
 
-                    <div class="achive__item">
+                    <li class="achive__item">
                         <span class="achive__number">856</span>
                         <p class="achive__text">Чашек кофе</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="reviews flex">
+        <section class="reviews">
             <div class="overlay"></div>
 
-            <button class="slider__left" type="button"><i class="fas fa-chevron-left"></i></button>
+            <div class="container flex">
+                <button class="slider__left" type="button"><i class="fas fa-chevron-left"></i></button>
 
-            <div class="container">
                 <div class="reviews__content pb">
-                    <h2 class="reviews__title">Наши отзывы</h2>
+                    <h2 class="reviews__title mb pt">Наши отзывы</h2>
 
                     <div class="reviews__item">
                         <p class="reviews__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -621,14 +647,9 @@
 
                     <div class="reviews__item">
                         <p class="reviews__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique nulla
-                            aliquet
-                            enim tortor at auctor urna. Id leo in vitae turpis massa sed elementum tempus. Aliquet nec
-                            ullamcorper sit amet risus nullam eget. Imperdiet dui accumsan sit amet nulla. Nisi porta
-                            lorem
-                            mollis aliquam ut. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Quis
-                            auctor elit sed vulputate mi sit amet mauris. Viverra accumsan in nisl nisi scelerisque."
-                        </p>
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi
+                            bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus
+                            laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis."</p>
                         <h3 class="reviews__author">Тодд Говард - Bethesda Game Studios</h3>
 
                         <ul class="reviews__star flex">
@@ -640,9 +661,10 @@
                         </ul>
                     </div>
                 </div>
+
+                <button class="slider__right" type="button"><i class="fas fa-chevron-right"></i></button>
             </div>
 
-            <button class="slider__right" type="button"><i class="fas fa-chevron-right"></i></button>
         </section>
 
         <section class="price ptb" id="price">
@@ -654,8 +676,8 @@
                         dolor neque dicta magni ratione delectus debitis odio.</p>
                 </div>
 
-                <div class="price__content flex mt">
-                    <div class="price__item">
+                <ul class="price__content flex mt">
+                    <li class="price__item">
                         <h3 class="price__title">Action</h3>
 
                         <div class="cost">
@@ -671,9 +693,9 @@
                             <li class="include__item"><i class="fas fa-times-circle"></i>Плюшки</li>
                         </ul>
                         <a href="#" class="btn fully">Выбрать план</a>
-                    </div>
+                    </li>
 
-                    <div class="price__item">
+                    <li class="price__item">
                         <h3 class="price__title">RPG</h3>
 
                         <div class="cost">
@@ -689,9 +711,9 @@
                             <li class="include__item"><i class="fas fa-times-circle"></i>Плюшки</li>
                         </ul>
                         <a href="#" class="btn fully">Выбрать план</a>
-                    </div>
+                    </li>
 
-                    <div class="price__item">
+                    <li class="price__item">
                         <h3 class="price__title">MMO</h3>
 
                         <div class="cost">
@@ -707,33 +729,45 @@
                             <li class="include__item"><i class="fas fa-check-circle"></i>Плюшки</li>
                         </ul>
                         <a href="#" class="btn fully">Выбрать план</a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <section class="brands mtb">
             <div class="container">
-                <div class="brands__content flex">
-                    <a class="brands__link" href="https://www.ea.com/frostbite" target="_blank">
-                        <img src="./img/brands/frostbite.svg" alt="logo frostbite">
-                    </a>
-                    <a class="brands__link" href="https://www.blender.org/" target="_blank">
-                        <img src="./img/brands/blender.svg" alt="logo blender">
-                    </a>
-                    <a class="brands__link" href="https://www.unrealengine.com/en-US/" target="_blank">
-                        <img src="./img/brands/unreal-engine.svg" alt="logo unreal-engine">
-                    </a>
-                    <a class="brands__link" href="https://unity.com/ru" target="_blank">
-                        <img src="./img/brands/unity.svg" alt="logo unity">
-                    </a>
-                    <a class="brands__link" href="https://www.substance3d.com/" target="_blank">
-                        <img src="./img/brands/substance-painter.svg" alt="logo substance-painter">
-                    </a>
-                    <a class="brands__link" href="https://pixologic.com/" target="_blank">
-                        <img src="./img/brands/zbrush.svg" alt="logo zbrush">
-                    </a>
-                </div>
+                <ul class="brands__content flex aic">
+                    <li>
+                        <a class="brands__link" href="https://www.ea.com/frostbite" target="_blank">
+                            <img src="./img/brands/frostbite.svg" alt="logo frostbite">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brands__link" href="https://www.blender.org/" target="_blank">
+                            <img src="./img/brands/blender.svg" alt="logo blender">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brands__link" href="https://www.unrealengine.com/en-US/" target="_blank">
+                            <img src="./img/brands/unreal-engine.svg" alt="logo unreal-engine">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brands__link" href="https://unity.com/ru" target="_blank">
+                            <img src="./img/brands/unity.svg" alt="logo unity">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brands__link" href="https://www.substance3d.com/" target="_blank">
+                            <img src="./img/brands/substance-painter.svg" alt="logo substance-painter">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brands__link" href="https://pixologic.com/" target="_blank">
+                            <img src="./img/brands/zbrush.svg" alt="logo zbrush">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -743,9 +777,10 @@
             <div class="container">
                 <div class="subscribe__content">
                     <h2 class="subscribe__title">Подпишитесь на нас</h2>
-                    <p class="subscribe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <p class="subscribe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
                         labore.</p>
-    
+
                     <form class="subscribe__form flex" action="#" method="POST">
                         <input type="text" placeholder="Email">
                         <button type="submit" class="btn transparent">Подписаться</button>
@@ -754,7 +789,7 @@
             </div>
         </section>
 
-        <section class="blogs mtb" id="blogs">
+        <section class="blogs ptb" id="blogs">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">Недавние блоги</h2>
@@ -763,79 +798,91 @@
                         dolor neque dicta magni ratione delectus debitis odio.</p>
                 </div>
 
-                <div class="blogs__content flex mt">
-                    <div class="blogs__item">
+                <ul class="blogs__content flex mt">
+                    <li class="blogs__item">
                         <img src="./img/blogs/blogs_1.png" alt="blog">
-
                         <h3 class="blogs__title">Ежегодное конференц-собрание</h3>
                         <p class="blogs__text">25 Августа, 2020 / Руководство</p>
                         <a href="#" class="btn fully"><i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    </li>
 
-                    <div class="blogs__item">
-                        <a class="blogs__link" href="#">
-                            <img src="./img/blogs/blogs_2.png" alt="">
-                        </a>
-                        <h3 class="blogs__title">
-                            <a class="blogs__link" href="#">Ежегодное конференц-собрание</a>
-                        </h3>
-                        <p class="blogs__text">25 Августа, 2020 / Руководство</p>
-                    </div>
+                    <li class="blogs__item">
+                        <img src="./img/blogs/blogs_2.png" alt="blog">
+                        <h3 class="blogs__title">Кинематография в движках</h3>
+                        <p class="blogs__text">14 Октября, 2020 / CG-команда</p>
+                        <a href="#" class="btn fully"><i class="fas fa-arrow-right"></i></a>
+                    </li>
 
-                    <div class="blogs__item">
-                        <a class="blogs__link" href="#">
-                            <img src="./img/blogs/blogs_3.png" alt="">
-                        </a>
-                        <h3 class="blogs__title">
-                            <a class="blogs__link" href="#">Ежегодное конференц-собрание</a>
-                        </h3>
-                        <p class="blogs__text">25 Августа, 2020 / Руководство</p>
-                    </div>
-                </div>
+                    <li class="blogs__item">
+                        <img src="./img/blogs/blogs_3.png" alt="blog">
+                        <h3 class="blogs__title">Обновление и перезапуск игр</h3>
+                        <p class="blogs__text">1 Декабря, 2020 / Команда IT</p>
+                        <a href="#" class="btn fully"><i class="fas fa-arrow-right"></i></a>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="map">
-            <a href="#">Найдите нас на карте<i class="fas fa-circle"></i></a>
+        <section class="map ptb">
+            <div class="overlay"></div>
+
+            <div class="container">
+                <div class="map__content">
+                    <a class="map__link" href="#">Найдите нас на карте<i class="fas fa-map-marker"></i></a>
+                </div>
+            </div>
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1462.0801538203916!2d74.60282445825494!3d42.869460460595896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7d022ff777d%3A0x6def27c66bd6c89c!2z0JHQuNC30L3QtdGBLdGG0LXQvdGC0YAgItCg0L7RgdGB0LjRjyI!5e0!3m2!1sru!2sus!4v1630697519339!5m2!1sru!2sus"
-                width="1910" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
 
-    <footer id="order">
+    <footer class="pt" id="order">
         <div class="container">
-            <div class="footer__info">
-                <h2 class="footer__title">Infiniti</h2>
+            <div class="footer__content flex aic">
+                <div class="footer__info">
+                    <h2 class="footer__title">Infiniti</h2>
+                    <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum
+                        neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet
+                        non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit
+                        dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet.</p>
 
-                <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum
-                    neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet
-                    non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit
-                    dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet.</p>
+                    <ul class="footer__icon flex">
+                        <li>
+                            <a class="footer__link" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="https://vimeo.com/"><i class="fab fa-vimeo-v"></i></a>
+                        </li>
+                        <li>
+                            <a class="footer__link" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
 
-                <div class="footer__icon">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="footer__form">
+                    <form class="flex" action="#" method="POST">
+                        <input id="name" type="text" placeholder="Имя">
+                        <input id="tel" type="text" placeholder="Номер телефона">
+                    </form>
+                    <textarea name="message" id="msg" cols="30" rows="8" placeholder="Сообщение"></textarea>
+                    <button class="btn fully" type="submit">Отправить сообщение</button>
                 </div>
             </div>
-
-            <form class="footer__form" action="#" method="POST">
-                <input id="name" type="text" placeholder="Имя">
-                <input id="tel" type="text" placeholder="Номер телефона">
-                <textarea name="message" id="msg" cols="30" rows="10" placeholder="Сообщение"></textarea>
-                <a class="btn" href="#">Отправить сообщение</a>
-            </form>
-
-            <p class="copyright">Infiniti 2021.<a href="#"> Все права защищены</a></p>
         </div>
+
+        <p class="copyright mt">Infiniti 2021. Все права защищены</p>
     </footer>
 
-    <!-- <script src="./js/app.js"></script> -->
+    <script src="./js/app.js"></script>
 
 </body>
 
