@@ -118,7 +118,8 @@ nav {
     transition: .1s linear;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.burger:hover {
     color: #ffffff;
 }
 
@@ -154,7 +155,7 @@ nav {
     top: 30px;
     left: -200px;
     z-index: 9;
-    transition: all .3s linear;
+    transition: .2s ease;
 }
 
 .shop__item {
@@ -182,6 +183,10 @@ nav {
     cursor: pointer;
 }
 
+.fa-trash:hover {
+    color: #fe1e1e;
+}
+
 .shop__footer {
     justify-content: space-around;
     background-color: #f5f5f5;
@@ -189,18 +194,7 @@ nav {
     border-top: 1px solid #797979;
 }
 
-.shop__btn {
-    background-color: #333333;
-    color: #ffffff;
-    text-transform: uppercase;
-    padding: 13px 15px;
-    font-weight: 300;
-    transition: .2s linear;
-}
-
-.shop__btn:hover {
-    background-color: #555555;
-}
+.shop__footer .btn {padding: 13px 15px;}
 
 .shop__total {color: #797979;}
 
@@ -215,58 +209,62 @@ nav {
     background-color: #212121;
 }
 
-.fixed .logo {color: #ffffff;}
+header.fixed .logo {color: #ffffff;}
 
-.fixed .nav__link {color: #ffffff;}
-
-.fixed .nav__link:hover,
-.fixed .burger {
+header.fixed .nav__link,
+header.fixed .burger {
     color: #ffffff;
 }
 
-/* burger
-=====================*/
-.checked .sidebar {
-    opacity: 1;
-    visibility: visible;
-    width: 217px;
-}
-
-.check {
-    opacity: 0;
-    z-index: -1;
-    display: block;
-    width: 0;
-    height: 0;
-}
-
-.check[type=checkbox]:checked + .fa-bars {
+header.fixed .nav__link:hover,
+header.fixed .burger:hover {
     color: #FEAF1E;
+}
+
+header.fixed .shop__menu {
+    background-color: #212121;
+    color: #ffffff;
+    transition: none;
+}
+
+header.fixed .shop__item {
+    border-top-color: #ffffff;
+}
+
+header.fixed .shop__footer {
+    background: #000000;
+}
+
+header.fixed .shop__footer .btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 /* sidebar
 =====================*/
 .sidebar {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     width: 0;
     overflow: hidden;
     height: 100vh;
     margin: 0;
-    padding: 25px 40px;
     position: absolute;
     top: 0;
     right: 0;
     background-color: #333333;
-    transition: 1s ease;
+    transition: .5s ease;
     z-index: 9;
 }
 
-.sidebar__list {margin-right: 60px;}
+.sidebar__list {
+    margin-right: 30px;
+    padding: 25px 30px;
+}
 
 .sidebar__item {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: 20px 0 30px;
 }
 
 .sidebar__item .logo {color: #ffffff;}
@@ -283,7 +281,8 @@ nav {
 
 .sidebar__cross {
     height: 35px;
-    margin-top: 10px;
+    margin-top: 35px;
+    margin-right: 30px;
     padding: 10px;
     border: none;
     color: #ffffff;
@@ -463,20 +462,31 @@ nav {
 
 /* video
 =====================*/
-.video iframe {
-    display: none;
-    text-align: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-}
+.video iframe {display: none;}
 
 .video {
-    background: #31344e url(../img/video/video.png) center no-repeat;
+    background: url(../img/video/video.png) center no-repeat;
     background-size: cover;
-    font-size: 100px;
+    font-size: clamp(70px, 8vw, 100px);
     padding: 100px 0;
+    transition: padding-bottom 1s ease;
+}
+
+.video.tool {
+    background: none;
+    padding-bottom: 20%;
+}
+
+.video.tool .video__link,
+.video.tool .overlay {
+    display: none;
+}
+
+.video.tool iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .video,
@@ -735,6 +745,7 @@ nav {
     justify-content: space-around;
     background: #31344e url(../img/reviews/reviews.png) center no-repeat;
     background-size: cover;
+    color: #ffffff;
 }
 
 .reviews,
@@ -758,15 +769,15 @@ nav {
 .reviews .container {
     max-width: 1440px;
     justify-content: space-between;
+    margin-top: 40px;
+    padding-bottom: 100px;
 }
 
 .reviews__content {max-width: 1000px;}
 
-.reviews__content .reviews__item:nth-child(2) {
+.reviews__content .reviews__item:not(:first-child) {
     display: none;
 }
-
-.reviews__content {color: #ffffff;}
 
 .reviews__text {font-style: italic;}
 
@@ -784,7 +795,6 @@ nav {
 
 .slider__left,
 .slider__right {
-    margin: 150px 0;
     font-size: clamp(28px, 5vw, 40px);
     color: #ffffff;
     cursor: pointer;
@@ -800,6 +810,21 @@ nav {
 .slider__left:hover,
 .slider__right:hover {
     color: #FEAF1E;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
 }
 
 /* price

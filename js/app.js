@@ -1,34 +1,40 @@
-function navMenu() {
+'use strict';
 
-    'use strict';
-    
-    let header = document.querySelector('.header');
+function navDrop() {
+    let header = document.querySelector('header');
+    let shop = document.querySelector('.shop');
 
     shop.addEventListener('click', (event) => {
         event.preventDefault();
     });
-    
+
     window.addEventListener('scroll', () => {
-        
-        if (document.body.scrollTop > 50 || 
-            document.documentElement.scrollTop > 50) {
-            header.classList.add('header__fixed');
-            
-
+        if (document.documentElement.scrollTop > 0.1) {
+            header.classList.add('fixed');
         } else {
-            header.classList.remove('header__fixed');
+            header.classList.remove('fixed');
         }
-
     });
-
 }
 
-navMenu();
+navDrop();
+
+function burgerMenu() {
+    let burger = document.querySelector('.burger');
+    let close = document.querySelector('.sidebar__cross');
+
+    burger.addEventListener('click', () => {
+        document.querySelector('.sidebar').style.width = '270px';
+    });
+
+    close.addEventListener('click', () => {
+        document.querySelector('.sidebar').style.width = '0';
+    });
+}
+
+burgerMenu();
 
 function accordionToggle() {
-    
-    'use strict';
-
     let accordion = document.querySelectorAll('.accordion__item');
 
     accordion.forEach((item) => {
@@ -40,11 +46,17 @@ function accordionToggle() {
 
 accordionToggle();
 
-// function getVideo() {
-    
-// }
+function getVideo() {
+    let videoLink = document.querySelector('.video__link');
+    let video = document.querySelector('.video');
 
-// getVideo();
+    videoLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        video.classList.toggle('tool');
+    });
+}
+
+getVideo();
 
 // function getWorks() {
     
@@ -160,19 +172,15 @@ accordionToggle();
 
 // getWorks();
 
-// function getHireUs() {
-    
-//     'use strict';
+function hire() {
+    let hire = document.querySelector('.hire .btn');
 
-//     let hireus = document.querySelector('.hireus__inner a');
+    hire.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+}
 
-//     hireus.addEventListener('click', (event) => {
-//         event.preventDefault();
-//     });
-
-// }
-
-// getHireUs();
+hire();
 
 // function getPortfolio() {
     
@@ -294,97 +302,98 @@ accordionToggle();
 
 // getPortfolio();
 
-// function getTestimonial() {
-    
-//     'use strict';
+function reviews() {
+    let reviews = document.querySelectorAll('.reviews__item');
+    let prev = document.querySelector('.slider__left');
+    let next = document.querySelector('.slider__right');
+    let dots = document.querySelectorAll('.dot');
 
-//     let testim = document.querySelectorAll('.ourtestim__testimonial');
-//     let next = document.querySelector('.ourtestim__inner .circle__right');
-//     let prev = document.querySelector('.ourtestim__inner .circle__left');
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-//     let slideIndex = 1;
-//     showSlides(slideIndex);
+    next.addEventListener('click', () => {
+        plusSlides(1);
+    });
 
-//     next.addEventListener('click', () => {
-//         plusSlides(1);
-//     });
+    prev.addEventListener('click', () => {
+        plusSlides(-1);
+    });
 
-//     prev.addEventListener('click', () => {
-//         plusSlides(-1);
-//     });
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-//     function plusSlides(n) {
-//         showSlides(slideIndex += n);
-//     }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-//     function showSlides(n) {
+    function showSlides(n) {
 
-//         if (n > testim.length) {
-//             slideIndex = 1;
-//         }
+        if (n > reviews.length) {
+            slideIndex = 1;
+        }
 
-//         if (n < 1) {
-//             slideIndex = testim.length;
-//         }
+        if (n < 1) {
+            slideIndex = reviews.length;
+        }
 
-//         for (let i = 0; i < testim.length; i++) {
-//             testim[i].style.display = "none";
-//         }
+        for (let i = 0; i < reviews.length; i++) {
+            reviews[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
         
-//         testim[slideIndex-1].style.display = "block";
+        reviews[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+}
 
-//     }
-// }
+reviews();
 
-// getTestimonial();
+function getPrice() {
+    //Создать функцию!
+    let price = document.querySelectorAll('.price .btn');
 
-// function getPrice() {
-//     //Создать функцию!
-// }
+    price.forEach(item => {
+        item.addEventListener('click', (e) => {
+             e.preventDefault();
+        });       
+    });
+}
 
-// getPrice();
+getPrice();
 
-// function getSub() {
-    
-//     'use strict';
+function subscribe() {
+    let subscribeInput = document.querySelector('.subscribe__form input');
+    let subscribe = document.querySelector('.subscribe__form .btn');
 
-//     let sub = document.querySelector('.subscribeus__inner form a');
-//     let subInput = document.querySelector('.subscribeus__inner form input');
+    subscribe.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (subscribeInput.value === "") {
+            alert('Заполните поля!')
+        } else {
+            alert('Подписка оформлена!');
+        }
+    });
+}
 
-//     sub.addEventListener('click', (event) => {
-//         event.preventDefault();
+subscribe();
 
-//         if (subInput.value !== "") {
-//             alert('Подписка оформлена!');
-//         } else {
-//             alert('Заполните поля!');
-//         }
-//     });
+function blogs() {
+    let blogs = document.querySelectorAll('.blogs .btn');
 
-// }
+    blogs.forEach(item => {
+        item.addEventListener('click', (e) => {
+             e.preventDefault();
+        });       
+    });
+}
 
-// getSub();
-
-// function getBlogs() {
-    
-//     'use strict';
-
-//     let blogs = document.querySelectorAll('.blogs .blogs__item');
-
-//     blogs.forEach((entry) => {
-//         entry.addEventListener('click', (event) => {
-//              event.preventDefault();
-//         });       
-//     });
-
-// }
-
-// getBlogs();
+blogs();
 
 function getMap() {
-    
-    'use strict';
-
     let mapLink = document.querySelector('.map__link');
     let map = document.querySelector('.map');
 
@@ -392,55 +401,26 @@ function getMap() {
         e.preventDefault();
         map.classList.toggle('tool');
     });
-
 }
 
 getMap();
 
-// function getPost() {
-    
-//     'use strict';
+function post() {
+    let post = document.querySelector('.footer__form .btn');
+    let postName = document.querySelector('.footer__form form #name');
+    let postTel = document.querySelector('.footer__form form #tel');
+    let postMsg = document.querySelector('.footer__form textarea'); 
 
-//     let post = document.querySelector('.infiniti__inner form a');
-//     let postInputName = document.querySelector('.infiniti__inner form #name');
-//     let postInputTel = document.querySelector('.infiniti__inner form #tel');
-//     let postTextArea = document.querySelector('.infiniti__inner form textarea'); 
+    post.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (postName.value === "" ||
+            postTel.value === "" ||
+            postMsg.value === "") {
+            alert('Заполните поля!');
+        } else {
+            alert('Сообщение отправлено!');
+        }
+    });
+}
 
-//     post.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         if (postInputName.value !== "" &&
-//          postInputTel.value !== "" &&
-//          postTextArea.value !== "") {
-//             alert('Сообщение отправлено!');
-//         } else {
-//             alert('Заполните поля!');
-//         }
-
-//     });
-
-// }
-
-// getPost();
-
-// function getIcons() {
-    
-//     'use strict';
-
-//     let icons = document.querySelectorAll('.info__icons a');
-//     let footer = document.querySelector('.footer a');
-
-//     icons.forEach((entry) => {
-//         entry.addEventListener('click', (event) => {
-//              event.preventDefault();
-//         });       
-//     });
-
-//     footer.addEventListener('click', (event) => {
-//         event.preventDefault();
-//     });
-
-// }
-
-// getIcons();
+post();
