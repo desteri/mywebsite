@@ -223,12 +223,12 @@ header.fixed .burger:hover {
 
 header.fixed .shop__menu {
     background-color: #212121;
-    color: #ffffff;
+    color: #E0E0E0;
     transition: none;
 }
 
 header.fixed .shop__item {
-    border-top-color: #ffffff;
+    border-top-color: #6A6B6C;
 }
 
 header.fixed .shop__footer {
@@ -279,7 +279,8 @@ header.fixed .shop__footer .btn:hover {
     color: #FEAF1E;
 }
 
-.sidebar__cross {
+.sidebar__cross,
+.modal__cross {
     height: 35px;
     margin-top: 35px;
     margin-right: 30px;
@@ -290,7 +291,8 @@ header.fixed .shop__footer .btn:hover {
     cursor: pointer;
 }
 
-.sidebar__cross:hover {
+.sidebar__cross:hover,
+.modal__cross:hover {
     color: #FEAF1E;
 }
 
@@ -323,7 +325,9 @@ header.fixed .shop__footer .btn:hover {
 .about__content,
 .moreabout__content,
 .works__content,
+.works__modal,
 .services__content,
+.modal__content,
 .portfolio__content,
 .skills__content,
 .achive__content,
@@ -407,6 +411,7 @@ header.fixed .shop__footer .btn:hover {
 .accordion__title,
 .moreabout__title,
 .services__title,
+.modal__name,
 .portfolio__title,
 .meter__title,
 .reviews__author,
@@ -534,7 +539,8 @@ header.fixed .shop__footer .btn:hover {
 .reviews__title,
 .hire__title,
 .subscribe__title,
-.map__link {
+.map__link,
+.modal__title {
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     font-weight: 500;
@@ -555,14 +561,31 @@ header.fixed .shop__footer .btn:hover {
 .services__text,
 .hire__text,
 .reviews__text,
-.subscribe__text {
+.subscribe__text,
+.modal__text {
     font-weight: 300;
     line-height: 20px;
 }
 
 /* works
 =====================*/
-.works__item {position: relative;}
+.works,
+.works__item {
+    position: relative;
+}
+
+.works > .overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(30, 30, 30, 0.7);
+    z-index: 8;
+}
 
 .works__item .overlay,
 .portfolio__item .overlay {
@@ -611,6 +634,36 @@ header.fixed .shop__footer .btn:hover {
     color: #FEAF1E;
 }
 
+/* works__modal
+=====================*/
+.works__modal {
+    display: none;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    background-color: #F2F2F2;
+    z-index: 8;
+}
+
+.modal__video {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal__title {
+    margin-bottom: 10px;
+}
+
+.modal__cross {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    font-size: 40px;
+    color: #333333;
+}
+
 /* services
 =====================*/
 .services {border-top: 2px solid #afafaf;}
@@ -652,18 +705,88 @@ header.fixed .shop__footer .btn:hover {
 .hire .overlay {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: absolute; /* fixed js */
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: rgba(30, 30, 30, 0.7);
+    /* z-index: 8;  js */
 }
 
 .hire__title,
 .hire__text {
     color: #ffffff;
     margin-bottom: 40px;
+}
+
+/* hire__modal
+=====================*/
+.hire__modal {
+    display: none;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    background-color: #F2F2F2;
+    z-index: 8;
+}
+
+.modal__card {
+    margin: 30px 0;
+    background-color: #ffffff;
+    position: relative;
+    transition: .3s ease;
+}
+
+.modal__card:first-child {margin-left: 50px;}
+.modal__card:last-child {margin-right: 50px;}
+
+.modal__name {margin: 30px 0 10px;}
+
+.modal__pos {
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.modal__card img {transition: .2s linear;}
+
+.modal__card:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px #333333;
+    background: linear-gradient(#FEAF1E, #ffffff);
+}
+
+.modal__card:hover img {
+    opacity: .1;
+}
+
+.modal__card:hover .social {
+    opacity: 1;
+    visibility: visible;
+}
+
+.social {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hire__link {
+    font-size: 24px;
+    color: #ffffff;
+    padding: 5px 8px;
+    background-color: #333333;
+    transition: .2s ease;
+}
+
+.hire__link:hover {
+    color: #333333;
+    background-color: #ffffff;
 }
 
 /* portfolio
@@ -812,21 +935,6 @@ header.fixed .shop__footer .btn:hover {
     color: #FEAF1E;
 }
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
 /* price
 =====================*/
 .price {background-color: #F2F2F2;}
@@ -962,8 +1070,6 @@ header.fixed .shop__footer .btn:hover {
 .blogs {
     background-color: #F2F2F2;
 }
-
-.blogs__item {border: none;}
 
 .blogs__item:hover {
     box-shadow: 15px 15px #00000040;

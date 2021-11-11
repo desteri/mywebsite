@@ -58,132 +58,68 @@ function getVideo() {
 
 getVideo();
 
-// function getWorks() {
-    
-//     'use strict';
+function getWorks() {
+    let getModal = document.querySelectorAll('.works__link');
+    let visibleOverlay = document.querySelector('.works > .overlay');
+    let visibleModal = document.querySelectorAll('.works__modal');
+    let iframeModal = document.querySelectorAll('.yt_player_iframe');
+    let closeModal = document.querySelectorAll('.modal__cross');
 
-//     let clickPlus = document.querySelector('.featuredwork .plus');
-//     let work = document.getElementsByClassName('work__image');
-//     let workImg = document.querySelectorAll('.work__image img');
-//     let workCont = document.querySelectorAll('.work__image .context');
-//     let next = document.querySelector('.work__modal .circle__right');
-//     let prev = document.querySelector('.work__modal .circle__left');
-    
-//     clickPlus.addEventListener('click', (event) => {
+    getModal.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            visibleOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
 
-//         event.preventDefault();
+            if (item.innerHTML == "FPS") {
+                visibleModal[0].style.display = 'block';
+            } else if (item.innerHTML == "RTS") {
+                visibleModal[1].style.display = 'block';
+            } else if (item.innerHTML == "RPG") {
+                visibleModal[2].style.display = 'block';
+            }
+        });
+    });
 
-//         for (let i = 0; i < work.length; i++) {
-        
-//             if (work[i].style.display === 'block' && 
-//                 workImg[i].style.display === 'block' &&
-//                 workCont[i].style.display === 'block' &&
-//                 next.style.display === 'block' &&
-//                 prev.style.display === 'block') {
-                
-//                     work[i].style.display = 'none';
-//                     workImg[i].style.display = 'none';
-//                     workCont[i].style.display = 'none';
-//                     next.style.display = 'none';
-//                     prev.style.display = 'none';
-                
-//             } else {
-//                 work[i].style.display = 'block';
-//                 workImg[i].style.display = 'block';
-//                 workCont[i].style.display = 'block';
-//                 next.style.display = 'block';
-//                 prev.style.display = 'block';
-//             }
-            
-//         }
+    closeModal.forEach(item => {
+        item.addEventListener('click', () => {
+            visibleOverlay.style.display = 'none';
+            document.body.style.overflow = 'visible';
 
-//         overlay.style.display = 'block';
-//         next.style.display = 'block';
-//         prev.style.display = 'block';
+            for (let i = 0; i < visibleModal.length; i++) {
+                visibleModal[i].style.display = 'none';
+            }
 
-//     });
+            iframeModal.forEach(item => {
+                item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+            });
+        });
+    });
+}
 
-//     closeX.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         for (let i = 0; i < work.length; i++) {
-        
-//             if (work[i].style.display === 'none' && 
-//                 workImg[i].style.display === 'none' &&
-//                 workCont[i].style.display === 'none' && 
-//                 next.style.display === 'block' &&
-//                 prev.style.display === 'block') {
-                
-//                     work[i].style.display = 'block';
-//                     workImg[i].style.display = 'block';
-//                     workCont[i].style.display = 'block';
-//                     next.style.display = 'block';
-//                     prev.style.display = 'block';
-                
-//             } else {
-//                 work[i].style.display = 'none';
-//                 workImg[i].style.display = 'none';
-//                 workCont[i].style.display = 'none';
-//                 next.style.display = 'none';
-//                 prev.style.display = 'none';
-//             }
-            
-//         }
-
-//         overlay.style.display = 'none';
-
-//     });
-
-//     let slideIndex = 1;
-//     showSlides(slideIndex);
-
-//     next.addEventListener('click', () => {
-//         plusSlides(1);
-//     });
-
-//     prev.addEventListener('click', () => {
-//         plusSlides(-1);
-//     });
-
-//     function plusSlides(n) {
-//         showSlides(slideIndex += n);
-//     }
-
-//     function showSlides(n) {
-
-//         if (n > work.length) {
-//             slideIndex = 1;
-//         }
-
-//         if (n < 1) {
-//             slideIndex = work.length;
-//         }
-
-//         for (let i = 0; i < work.length; i++) {
-//             work[i].style.display = "none";
-//         }
-        
-//         work[slideIndex-1].style.display = "block";
-
-//     }
-
-// }
-
-// getWorks();
+getWorks();
 
 function hire() {
     let hire = document.querySelector('.hire .btn');
+    let hireModal = document.querySelector('.hire__modal');
+    let closeModal = document.querySelector('.modal__cross');
 
     hire.addEventListener('click', (e) => {
         e.preventDefault();
+        hireModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     });
+
+    closeModal.addEventListener('click', () => {
+        hireModal.style.display = 'none';
+        document.body.style.overflow = 'visible';
+    }
 }
 
 hire();
 
 // function getPortfolio() {
-    
+
 //     'use strict';
 
 //     let clickArrowOne = document.querySelector('.prtf__one .circle__one');
@@ -323,10 +259,6 @@ function reviews() {
         showSlides(slideIndex += n);
     }
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
     function showSlides(n) {
 
         if (n > reviews.length) {
@@ -341,12 +273,7 @@ function reviews() {
             reviews[i].style.display = "none";
         }
 
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        
-        reviews[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        reviews[slideIndex - 1].style.display = "block";
     }
 }
 
@@ -358,8 +285,8 @@ function getPrice() {
 
     price.forEach(item => {
         item.addEventListener('click', (e) => {
-             e.preventDefault();
-        });       
+            e.preventDefault();
+        });
     });
 }
 
@@ -375,6 +302,7 @@ function subscribe() {
             alert('Заполните поля!')
         } else {
             alert('Подписка оформлена!');
+            subscribeInput.value = "";
         }
     });
 }
@@ -386,8 +314,8 @@ function blogs() {
 
     blogs.forEach(item => {
         item.addEventListener('click', (e) => {
-             e.preventDefault();
-        });       
+            e.preventDefault();
+        });
     });
 }
 
@@ -409,7 +337,7 @@ function post() {
     let post = document.querySelector('.footer__form .btn');
     let postName = document.querySelector('.footer__form form #name');
     let postTel = document.querySelector('.footer__form form #tel');
-    let postMsg = document.querySelector('.footer__form textarea'); 
+    let postMsg = document.querySelector('.footer__form textarea');
 
     post.addEventListener('click', (e) => {
         e.preventDefault();
@@ -419,6 +347,9 @@ function post() {
             alert('Заполните поля!');
         } else {
             alert('Сообщение отправлено!');
+            postName.value = "";
+            postTel.value = "";
+            postMsg.value = "";
         }
     });
 }
