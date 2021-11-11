@@ -63,7 +63,7 @@ function getWorks() {
     let visibleOverlay = document.querySelector('.works > .overlay');
     let visibleModal = document.querySelectorAll('.works__modal');
     let iframeModal = document.querySelectorAll('.yt_player_iframe');
-    let closeModal = document.querySelectorAll('.modal__cross');
+    let closeModal = document.querySelectorAll('.works__modal .modal__cross');
 
     getModal.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -81,20 +81,24 @@ function getWorks() {
         });
     });
 
-    closeModal.forEach(item => {
-        item.addEventListener('click', () => {
-            visibleOverlay.style.display = 'none';
-            document.body.style.overflow = 'visible';
+    const click = () => {
+        visibleOverlay.style.display = 'none';
+        document.body.style.overflow = 'visible';
 
-            for (let i = 0; i < visibleModal.length; i++) {
-                visibleModal[i].style.display = 'none';
-            }
+        for (let i = 0; i < visibleModal.length; i++) {
+            visibleModal[i].style.display = 'none';
+        }
 
-            iframeModal.forEach(item => {
-                item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
-            });
+        iframeModal.forEach(item => {
+            item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
         });
+    };
+
+    closeModal.forEach(item => {
+        item.addEventListener('click', click);
     });
+
+    visibleOverlay.addEventListener('click', click);
 }
 
 getWorks();
@@ -102,147 +106,111 @@ getWorks();
 function hire() {
     let hire = document.querySelector('.hire .btn');
     let hireModal = document.querySelector('.hire__modal');
-    let closeModal = document.querySelector('.modal__cross');
+    let closeModal = document.querySelector('.hire__modal .modal__cross');
+    let visibleOverlay = document.querySelector('.hire > .overlay');
 
     hire.addEventListener('click', (e) => {
         e.preventDefault();
+        visibleOverlay.style.zIndex = '8';
+        visibleOverlay.style.position = 'fixed';
+        visibleOverlay.style.backgroundColor = '#000000cc';
         hireModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
     });
 
-    closeModal.addEventListener('click', () => {
+    const click = () => {
+        visibleOverlay.style.zIndex = 'auto';
+        visibleOverlay.style.position = 'absolute';
+        visibleOverlay.style.backgroundColor = '#1e1e1eb3';
         hireModal.style.display = 'none';
         document.body.style.overflow = 'visible';
-    }
+    };
+
+    closeModal.addEventListener('click', click);
+
+    visibleOverlay.addEventListener('click', click);
 }
 
 hire();
 
-// function getPortfolio() {
+function getPortfolio() {
+    let getModal = document.querySelectorAll('.portMod');
+    let visibleOverlay = document.querySelector('.portfolio > .overlay');
+    let visibleModal = document.querySelectorAll('.modal__product');
+    let closeModal = document.querySelectorAll('.modal__product .modal__cross');
 
-//     'use strict';
+    getModal.forEach((item, i) => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            visibleOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            switch (i) {
+                case 0:
+                    visibleModal[0].style.display = 'block';
+                    break;
+                case 1:
+                    visibleModal[1].style.display = 'block';
+                    break;
+                case 2:
+                    visibleModal[2].style.display = 'block';
+                    break;
+                case 3:
+                    visibleModal[3].style.display = 'block';
+                    break;
+                case 4:
+                    visibleModal[4].style.display = 'block';
+                    break;
+                case 5:
+                    visibleModal[5].style.display = 'block';
+                    break;
+                case 6:
+                    visibleModal[6].style.display = 'block';
+                    break;
+                case 7:
+                    visibleModal[7].style.display = 'block';
+                    break;
+                case 8:
+                    visibleModal[8].style.display = 'block';
+                    break;
+                case 9:
+                    visibleModal[9].style.display = 'block';
+                    break;
+                case 10:
+                    visibleModal[10].style.display = 'block';
+                    break;
+                case 11:
+                    visibleModal[11].style.display = 'block';
+                    break;
 
-//     let clickArrowOne = document.querySelector('.prtf__one .circle__one');
-//     let clickArrowTwo = document.querySelector('.prtf__two .circle__one');
-//     let clickArrowThree = document.querySelector('.prtf__three .circle__one');
-//     let clickArrowFour = document.querySelector('.prtf__four .circle__one');
-//     let clickArrowFive = document.querySelector('.prtf__five .circle__one');
-//     let clickArrowSix = document.querySelector('.prtf__six .circle__one');
-//     let clickArrowSeven = document.querySelector('.prtf__seven .circle__one');
-//     let clickArrowEight = document.querySelector('.prtf__eight .circle__one');
-//     let prtfOne = document.querySelector('.prtf__img_one');
-//     let prtfTwo = document.querySelector('.prtf__img_two');
-//     let prtfThree = document.querySelector('.prtf__img_three');
-//     let prtfFour = document.querySelector('.prtf__img_four');
-//     let prtfFive = document.querySelector('.prtf__img_five');
-//     let prtfSix = document.querySelector('.prtf__img_six');
-//     let prtfSeven = document.querySelector('.prtf__img_seven');
-//     let prtfEight = document.querySelector('.prtf__img_eight');
-//     let linkSearch = document.querySelectorAll('.portfolio__item .circle__two a');
+                default:
+                    alert('Что-то пошло не так..');
+                    break;
+            }
+        });
+    });
 
-//     linkSearch.forEach((entry) => {
-//        entry.addEventListener('click', (event) => {
-//             event.preventDefault();
-//        });       
-//     });
+    const click = () => {
+        visibleOverlay.style.display = 'none';
+        document.body.style.overflow = 'visible';
 
-//     clickArrowOne.addEventListener('click', (event) => {
+        for (let i = 0; i < visibleModal.length; i++) {
+            visibleModal[i].style.display = 'none';
+        }
+    };
 
-//         event.preventDefault();
+    closeModal.forEach(item => {
+        item.addEventListener('click', click);
+    });
 
-//         overlay.style.display = 'block';
-//         prtfOne.style.display = 'block';
+    visibleOverlay.addEventListener('click', click);
+}
 
-//     });
-
-//     clickArrowTwo.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'block';
-//         prtfTwo.style.display = 'block';
-
-//     });
-
-//     clickArrowThree.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'block';
-//         prtfThree.style.display = 'block';
-
-//     });
-
-//     clickArrowFour.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'block';
-//         prtfFour.style.display = 'block';
-
-//     });
-
-//     clickArrowFive.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'block';
-//         prtfFive.style.display = 'block';
-
-//     });
-
-//     clickArrowSix.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'block';
-//         prtfSix.style.display = 'block';
-
-//     });
-
-//     clickArrowSeven.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'block';
-//         prtfSeven.style.display = 'block';
-
-//     });
-
-//     clickArrowEight.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'block';
-//         prtfEight.style.display = 'block';
-
-//     });
-
-//     closeX.addEventListener('click', (event) => {
-
-//         event.preventDefault();
-
-//         overlay.style.display = 'none';
-//         prtfOne.style.display = 'none';
-//         prtfTwo.style.display = 'none';
-//         prtfThree.style.display = 'none';
-//         prtfFour.style.display = 'none';
-//         prtfFive.style.display = 'none';
-//         prtfSix.style.display = 'none';
-//         prtfSeven.style.display = 'none';
-//         prtfEight.style.display = 'none';
-
-//     });
-
-// }
-
-// getPortfolio();
+getPortfolio();
 
 function reviews() {
     let reviews = document.querySelectorAll('.reviews__item');
-    let prev = document.querySelector('.slider__left');
-    let next = document.querySelector('.slider__right');
-    let dots = document.querySelectorAll('.dot');
+    let prev = document.querySelector('.reviews .slider__left');
+    let next = document.querySelector('.reviews .slider__right');
 
     let slideIndex = 1;
     showSlides(slideIndex);
@@ -280,12 +248,13 @@ function reviews() {
 reviews();
 
 function getPrice() {
-    //Создать функцию!
     let price = document.querySelectorAll('.price .btn');
 
     price.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
+
+            
         });
     });
 }
