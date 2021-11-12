@@ -46,62 +46,62 @@ function accordionToggle() {
 
 accordionToggle();
 
-function getVideo() {
-    let videoLink = document.querySelector('.video__link');
-    let video = document.querySelector('.video');
+// function getVideo() {
+//     let videoLink = document.querySelector('.video__link');
+//     let video = document.querySelector('.video');
 
-    videoLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        video.classList.toggle('tool');
-    });
-}
+//     videoLink.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         video.classList.toggle('tool');
+//     });
+// }
 
-getVideo();
+// getVideo();
 
-function getWorks() {
-    let getModal = document.querySelectorAll('.works__link');
-    let visibleOverlay = document.querySelector('.works > .overlay');
-    let visibleModal = document.querySelectorAll('.works__modal');
-    let iframeModal = document.querySelectorAll('.yt_player_iframe');
-    let closeModal = document.querySelectorAll('.works__modal .modal__cross');
+// function getWorks() {
+//     let getModal = document.querySelectorAll('.works__link');
+//     let visibleOverlay = document.querySelector('.works > .overlay');
+//     let visibleModal = document.querySelectorAll('.works__modal');
+//     let iframeModal = document.querySelectorAll('.yt_player_iframe');
+//     let closeModal = document.querySelectorAll('.works__modal .modal__cross');
 
-    getModal.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            visibleOverlay.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+//     getModal.forEach(item => {
+//         item.addEventListener('click', (e) => {
+//             e.preventDefault();
+//             visibleOverlay.style.display = 'block';
+//             document.body.style.overflow = 'hidden';
 
-            if (item.innerHTML == "FPS") {
-                visibleModal[0].style.display = 'block';
-            } else if (item.innerHTML == "RTS") {
-                visibleModal[1].style.display = 'block';
-            } else if (item.innerHTML == "RPG") {
-                visibleModal[2].style.display = 'block';
-            }
-        });
-    });
+//             if (item.innerHTML == "FPS") {
+//                 visibleModal[0].style.display = 'block';
+//             } else if (item.innerHTML == "RTS") {
+//                 visibleModal[1].style.display = 'block';
+//             } else if (item.innerHTML == "RPG") {
+//                 visibleModal[2].style.display = 'block';
+//             }
+//         });
+//     });
 
-    const click = () => {
-        visibleOverlay.style.display = 'none';
-        document.body.style.overflow = 'visible';
+//     const click = () => {
+//         visibleOverlay.style.display = 'none';
+//         document.body.style.overflow = 'visible';
 
-        for (let i = 0; i < visibleModal.length; i++) {
-            visibleModal[i].style.display = 'none';
-        }
+//         for (let i = 0; i < visibleModal.length; i++) {
+//             visibleModal[i].style.display = 'none';
+//         }
 
-        iframeModal.forEach(item => {
-            item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
-        });
-    };
+//         iframeModal.forEach(item => {
+//             item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+//         });
+//     };
 
-    closeModal.forEach(item => {
-        item.addEventListener('click', click);
-    });
+//     closeModal.forEach(item => {
+//         item.addEventListener('click', click);
+//     });
 
-    visibleOverlay.addEventListener('click', click);
-}
+//     visibleOverlay.addEventListener('click', click);
+// }
 
-getWorks();
+// getWorks();
 
 function hire() {
     let hire = document.querySelector('.hire .btn');
@@ -247,14 +247,46 @@ function reviews() {
 
 reviews();
 
-function getPrice() {
-    let price = document.querySelectorAll('.price .btn');
 
-    price.forEach(item => {
+function getPrice() {
+    let priceBtn = document.querySelectorAll('.add');
+
+    const priceDB = [{
+            id: 1,
+            title: 'FPS',
+            cost: 1499
+        },
+        {
+            id: 2,
+            title: 'RTS',
+            cost: 2499
+        },
+        {
+            id: 3,
+            title: 'RPG',
+            cost: 5499
+        }
+    ];
+
+    priceBtn.forEach((item) => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
 
-            
+            for (let i = 0; i < priceDB.length; i++) {
+                let li = document.createElement('li');
+
+                li.innerHTML = `<div class="shop__item">
+                                <h5 class="shop__title">${priceDB[i].title}</h5>
+                                <p class="shop__price">
+                                    <span>${priceDB[i].cost}</span> в месяц<i class="fas fa-trash"></i>
+                                </p>
+                            </div>`;
+
+                let ul = document.querySelector('.shop__ul');
+                ul.appendChild(li);
+
+            }
+
         });
     });
 }
@@ -290,17 +322,17 @@ function blogs() {
 
 blogs();
 
-function getMap() {
-    let mapLink = document.querySelector('.map__link');
-    let map = document.querySelector('.map');
+// function getMap() {
+//     let mapLink = document.querySelector('.map__link');
+//     let map = document.querySelector('.map');
 
-    mapLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        map.classList.toggle('tool');
-    });
-}
+//     mapLink.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         map.classList.toggle('tool');
+//     });
+// }
 
-getMap();
+// getMap();
 
 function post() {
     let post = document.querySelector('.footer__form .btn');
