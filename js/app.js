@@ -250,48 +250,61 @@ reviews();
 
 function getPrice() {
     let priceBtn = document.querySelectorAll('.add');
-
-    const priceDB = [{
-            id: 1,
-            title: 'FPS',
-            cost: 1499
-        },
-        {
-            id: 2,
-            title: 'RTS',
-            cost: 2499
-        },
-        {
-            id: 3,
-            title: 'RPG',
-            cost: 5499
-        }
-    ];
+    let priceCost = document.querySelectorAll('.number');
+    let priceTitle = document.querySelectorAll('.price__title');        
 
     priceBtn.forEach((item) => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
 
-            for (let i = 0; i < priceDB.length; i++) {
-                let li = document.createElement('li');
+            let li = document.createElement('li');
 
-                li.innerHTML = `<div class="shop__item">
-                                <h5 class="shop__title">${priceDB[i].title}</h5>
-                                <p class="shop__price">
-                                    <span>${priceDB[i].cost}</span> в месяц<i class="fas fa-trash"></i>
-                                </p>
-                            </div>`;
+            li.innerHTML = `<div class="shop__item">
+                    <h5 class="shop__title">${priceTitle[0].innerHTML}</h5>
+                    <p class="shop__price">
+                        <span>${priceCost[0].innerHTML}</span> в месяц<i class="fas fa-trash"></i>
+                    </p>
+                </div>`;
 
-                let ul = document.querySelector('.shop__ul');
-                ul.appendChild(li);
+            let ul = document.querySelector('.shop__ul');
+            ul.appendChild(li);
 
-            }
-
+            delPrice();
+            updPrice();
+            sumPrice();
         });
     });
 }
 
 getPrice();
+
+function delPrice() {
+    let trash = document.querySelectorAll('.fa-trash');
+
+    trash.forEach(item => {
+        item.addEventListener('click', function () {
+            this.parentNode.parentNode.remove();
+
+            updPrice();
+        })
+    });
+}
+
+function updPrice() {
+    let update = document.querySelectorAll('.shop__item').length;
+    document.querySelector('.shop__count').innerHTML = update;
+}
+
+function sumPrice() {
+    let priceCost = document.querySelectorAll('.number');
+    let count = 0;
+
+    for (let i = 0; i < priceCost.length; i++) {
+        count += (+priceCost[i].textContent);
+    }
+
+    document.querySelector('.total').innerHTML = `$${count}`;
+}
 
 function subscribe() {
     let subscribeInput = document.querySelector('.subscribe__form input');
