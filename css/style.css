@@ -331,7 +331,7 @@ header.fixed .shop__footer .btn:hover {
 .modal__content,
 .portfolio__content,
 .skills__content,
-.achive__content,
+.achieve__content,
 .price__content,
 .brands__content,
 .subscribe__form,
@@ -438,8 +438,6 @@ header.fixed .shop__footer .btn:hover {
     padding: 25px;
 }
 
-/* .accordion__item.active .accordion__content {display: block;} */
-
 /* moreabout
 =====================*/
 .moreabout__item,
@@ -533,7 +531,7 @@ header.fixed .shop__footer .btn:hover {
 .video,
 .section__header,
 .hire,
-.achive__item,
+.achieve__item,
 .reviews,
 .price__item,
 .blogs__item,
@@ -896,28 +894,42 @@ header.fixed .shop__footer .btn:hover {
 
 .meter__full {background-color: #F2F2F2;}
 
-.one {width: 80%;}
-.two {width: 20%;}
-.three {width: 70%;}
-.four {width: 30%;}
-.five {width: 90%;}
-.six {width: 10%;}
+.one__fill,
+.two__fill,
+.three__fill {
+    width: 0;
+    transition: 5s linear;
+}
 
-/* achive
+.one__full,
+.two__full,
+.three__full {
+    width: 100%;
+    transition: 5s linear;
+}
+
+.meter.loadMeter .one__fill {width: 80%;}
+.meter.loadMeter .one__full {width: 20%;}
+.meter.loadMeter .two__fill {width: 70%;}
+.meter.loadMeter .two__full {width: 30%;}
+.meter.loadMeter .three__fill {width: 90%;}
+.meter.loadMeter .three__full {width: 10%;}
+
+/* achieve
 =====================*/
-.achive {border-top: 2px solid #afafaf;}
+.achieve {border-top: 2px solid #afafaf;}
 
-.achive__content {gap: 50px;}
+.achieve__content {gap: 50px;}
 
-.achive__item {width: 200px;}
+.achieve__item {width: 200px;}
 
-.achive__number {
+.achieve__number {
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     font-weight: 500;
 }
 
-.achive__number::after {
+.achieve__number::after {
     content: "";
     width: 35px;
     height: 3px;
@@ -926,7 +938,7 @@ header.fixed .shop__footer .btn:hover {
     background-color: #FEAF1E;
 }
 
-.achive__text {
+.achieve__text {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -1163,10 +1175,13 @@ header.fixed .shop__footer .btn:hover {
 
 /* map
 =====================*/
+.map iframe {display: none;}
+
 .map {
     background: #31344e url(../img/map/map.png) center no-repeat;
     background-size: cover;
     color: #ffffff;
+    transition: .5s linear;
 }
 
 .map.tool {
@@ -1208,8 +1223,6 @@ header.fixed .shop__footer .btn:hover {
 }
 
 .fa-map-marker {margin-left: 20px;}
-
-.map iframe {display: none;}
 
 /* footer
 =====================*/
