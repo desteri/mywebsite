@@ -1,9 +1,7 @@
 'use strict';
 
 function getScroll() {
-    let scroll = document.querySelectorAll('.scroll[href^="#"]');
-
-    scroll.forEach(item => {
+    document.querySelectorAll('.scroll[href^="#"]').forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
             let href = item.getAttribute('href').substring(1);
@@ -314,7 +312,9 @@ function delPrice() {
 
 function updPrice() {
     let update = document.querySelectorAll('.shop__item').length;
-    document.querySelector('.shop__count').innerHTML = update;
+    document.querySelectorAll('.shop__count').forEach(item => {
+        item.innerHTML = update;
+    });
 }
 
 function sumPrice() {
