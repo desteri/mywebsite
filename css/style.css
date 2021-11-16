@@ -438,13 +438,13 @@ header.fixed .shop__footer .btn:hover {
     overflow: hidden;
     font-weight: 300;
     line-height: 1.3;
-    border-bottom: 1px solid #e4e4e4;
-    transition: padding .5s ease;
+    transition: 1s ease;
 }
 
 .accordion__item.active .accordion__content {
-    height: 100%;
+    height: 125px;
     padding: 25px;
+    border-bottom: 1px solid #e4e4e4;
 }
 
 /* moreabout
@@ -1345,4 +1345,9 @@ footer textarea {display: block;}
     .burger {
         display: block;
     }
+
+    .accordion__item.active .accordion__content {
+        overflow-y: auto;
+    }
+    
 }
