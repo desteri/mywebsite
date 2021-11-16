@@ -22,10 +22,12 @@ getScroll();
 
 function navDrop() {
     let header = document.querySelector('header');
-    let shop = document.querySelector('.shop');
+    let shop = document.querySelectorAll('.shop');
 
-    shop.addEventListener('click', (event) => {
-        event.preventDefault();
+    shop.forEach(item => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+        });
     });
 
     window.addEventListener('scroll', () => {
@@ -133,7 +135,7 @@ function hire() {
         e.preventDefault();
         visibleOverlay.style.zIndex = '8';
         visibleOverlay.style.position = 'fixed';
-        visibleOverlay.style.backgroundColor = '#000000cc';
+        visibleOverlay.style.backgroundColor = '#000000e6';
         hireModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
     });
@@ -325,8 +327,11 @@ function getPrice() {
                     </p>
                 </div>`;
 
-            let ul = document.querySelector('.shop__ul');
-            ul.appendChild(li);
+            let ul = document.querySelectorAll('.shop__ul');
+
+            ul.forEach(item => {
+                item.appendChild(li);
+            });
 
             delPrice();
             updPrice();
