@@ -56,6 +56,32 @@ function burgerMenu() {
 
 burgerMenu();
 
+function getDetails() {
+    let btn = document.querySelector('.about__info .btn');
+    let visibleOverlay = document.querySelector('.details__modal .overlay');
+    let visibleModal = document.querySelector('.modal');
+    let closeModal = document.querySelector('.modal__more .modal__cross');
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        visibleModal.style.display = 'block';
+        visibleOverlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+
+    const click = () => {
+        visibleModal.style.display = 'none';
+        visibleOverlay.style.display = 'none';
+        document.body.style.overflow = 'visible';
+    };
+
+    closeModal.addEventListener('click', click);
+
+    visibleOverlay.addEventListener('click', click);
+}
+
+getDetails();
+
 function accordionToggle() {
     let accordion = document.querySelectorAll('.accordion__item');
 
@@ -229,6 +255,68 @@ function getPortfolio() {
 
 getPortfolio();
 
+function portfolioSlider() {
+    let prev = document.querySelectorAll('.modal__product .slider__left'),
+        next = document.querySelectorAll('.modal__product .slider__right'),
+        sliderOne = document.querySelectorAll(".slider-one img"),
+        sliderTwo = document.querySelectorAll(".slider-two img"),
+        sliderThree = document.querySelectorAll(".slider-three img"),
+        sliderFour = document.querySelectorAll(".slider-four img"),
+        sliderFive = document.querySelectorAll(".slider-five img"),
+        sliderSix = document.querySelectorAll(".slider-six img"),
+        sliderSeven = document.querySelectorAll(".slider-seven img"),
+        sliderEight = document.querySelectorAll(".slider-eight img"),
+        sliderNine = document.querySelectorAll(".slider-nine img"),
+        sliderTen = document.querySelectorAll(".slider-ten img"),
+        sliderEleven = document.querySelectorAll(".slider-eleven img"),
+        sliderTwelve = document.querySelectorAll(".slider-twelve img"),
+        arrSlide = [
+            sliderOne, sliderTwo, sliderThree, 
+            sliderFour, sliderFive, sliderSix, 
+            sliderSeven, sliderEight, sliderNine, 
+            sliderTen, sliderEleven, sliderTwelve
+        ];
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    prev.forEach(item => {
+        item.addEventListener('click', () => {
+            plusSlides(-1)
+        });
+    });
+
+    next.forEach(item => {
+        item.addEventListener('click', () => {
+            plusSlides(1)
+        });
+    });
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        for (let i = 0; i < arrSlide.length; i++) {
+            if (n > arrSlide[i].length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = arrSlide[i].length;
+            }
+
+            for (let image of arrSlide[i]) {
+                image.style.display = "none";
+            }     
+
+            arrSlide[i].item(slideIndex - 1).style.display = "block";
+        }
+    }
+}
+
+portfolioSlider();
+
 function getMeter() {
     document.querySelectorAll('.meter').forEach(item => {
         let meterTop = item.getBoundingClientRect().top;
@@ -289,7 +377,6 @@ function reviews() {
     }
 
     function showSlides(n) {
-
         if (n > reviews.length) {
             slideIndex = 1;
         }
