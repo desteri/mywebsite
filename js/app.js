@@ -148,7 +148,7 @@ function getVideo() {
     });
 }
 
-// getVideo();
+getVideo();
 
 function getWorks() {
     let getModal = document.querySelectorAll('.works__link');
@@ -549,7 +549,7 @@ function getMap() {
     });
 }
 
-// getMap();
+getMap();
 
 function post() {
     let post = document.querySelector('.footer__form .btn');
