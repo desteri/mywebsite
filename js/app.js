@@ -9,26 +9,19 @@ function getScroll() {
             const topOffset = 120;
             const elementPosition = scrollTarget.getBoundingClientRect().top;
             const offsetPosition = elementPosition - topOffset;
-            
+
             window.scrollBy({
                 top: offsetPosition,
                 behavior: 'smooth'
             });
         });
-    });           
+    });
 }
 
 getScroll();
 
 function navDrop() {
     let header = document.querySelector('header');
-    let shop = document.querySelectorAll('.shop');
-
-    shop.forEach(item => {
-        item.addEventListener('click', (event) => {
-            event.preventDefault();
-        });
-    });
 
     window.addEventListener('scroll', () => {
         if (document.documentElement.scrollTop > 0.1) {
@@ -55,6 +48,57 @@ function burgerMenu() {
 }
 
 burgerMenu();
+
+function getCheckShop() {
+    let shop = document.querySelectorAll('.shop');
+    let visibleOverlay = document.querySelector('.modal__check .overlay');
+    let visibleModal = document.querySelector('.check__content');
+    let closeModal = document.querySelector('.check__content .modal__cross');
+
+    shop.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            visibleModal.style.display = 'block';
+            visibleOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            document.querySelector('.sidebar').style.width = '0';
+        });
+    });
+
+    let submit = document.querySelector('.check__right .btn');
+    let submitFName = document.querySelector('.check__right form #fname');
+    let submitSName = document.querySelector('.check__right form #sname');
+    let submitTel = document.querySelector('.check__right form #tel');
+    let submitMail = document.querySelector('.check__right form #email');
+
+    submit.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (submitFName.value === "" ||
+            submitSName.value === "" ||
+            submitTel.value === "" ||
+            submitMail.value === "") {
+            alert('Заполните поля!');
+        } else {
+            alert('Сообщение отправлено!');
+            submitFName.value = "";
+            submitSName.value = "";
+            submitTel.value = "";
+            submitMail.value = "";
+        }
+    });
+
+    const click = () => {
+        visibleModal.style.display = 'none';
+        visibleOverlay.style.display = 'none';
+        document.body.style.overflow = 'visible';
+    };
+
+    closeModal.addEventListener('click', click);
+
+    visibleOverlay.addEventListener('click', click);
+}
+
+getCheckShop();
 
 function getDetails() {
     let btn = document.querySelector('.about__info .btn');
@@ -104,7 +148,7 @@ function getVideo() {
     });
 }
 
-getVideo();
+// getVideo();
 
 function getWorks() {
     let getModal = document.querySelectorAll('.works__link');
@@ -271,9 +315,9 @@ function portfolioSlider() {
         sliderEleven = document.querySelectorAll(".slider-eleven img"),
         sliderTwelve = document.querySelectorAll(".slider-twelve img"),
         arrSlide = [
-            sliderOne, sliderTwo, sliderThree, 
-            sliderFour, sliderFive, sliderSix, 
-            sliderSeven, sliderEight, sliderNine, 
+            sliderOne, sliderTwo, sliderThree,
+            sliderFour, sliderFive, sliderSix,
+            sliderSeven, sliderEight, sliderNine,
             sliderTen, sliderEleven, sliderTwelve
         ];
 
@@ -308,7 +352,7 @@ function portfolioSlider() {
 
             for (let image of arrSlide[i]) {
                 image.style.display = "none";
-            }     
+            }
 
             arrSlide[i].item(slideIndex - 1).style.display = "block";
         }
@@ -322,7 +366,7 @@ function getMeter() {
         let meterTop = item.getBoundingClientRect().top;
 
         let onScroll = () => {
-            if(window.scrollY > meterTop - window.innerHeight / 2) {
+            if (window.scrollY > meterTop - window.innerHeight / 2) {
                 window.removeEventListener('scroll', onScroll);
                 item.classList.toggle('loadMeter');
             }
@@ -336,16 +380,16 @@ getMeter();
 
 function getAchieve() {
     document.querySelectorAll('.achieve__number').forEach(item => {
-        let	numberTop = item.getBoundingClientRect().top;
-        let	start = +item.innerHTML;
+        let numberTop = item.getBoundingClientRect().top;
+        let start = +item.innerHTML;
         let end = +item.dataset.max;
 
         window.addEventListener('scroll', function onScroll() {
-            if(window.scrollY > numberTop - window.innerHeight / 2) {
+            if (window.scrollY > numberTop - window.innerHeight / 2) {
                 this.removeEventListener('scroll', onScroll);
-                let interval = setInterval(function() {
+                let interval = setInterval(function () {
                     item.innerHTML = ++start;
-                    if(start == end) {
+                    if (start == end) {
                         clearInterval(interval);
                     }
                 }, 10);
@@ -398,66 +442,73 @@ reviews();
 
 function getPrice() {
     let priceBtn = document.querySelectorAll('.add');
-    let priceCost = document.querySelectorAll('.number');
-    let priceTitle = document.querySelectorAll('.price__title');        
 
-    priceBtn.forEach((item) => {
-        item.addEventListener('click', (e) => {
+    priceBtn.forEach(item => {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
-
+            let priceCost = this.parentNode.querySelectorAll('.number');
+            let priceTitle = this.parentNode.querySelectorAll('.price__title');
             let li = document.createElement('li');
-
+    
             li.innerHTML = `<div class="shop__item">
-                    <h5 class="shop__title">${priceTitle[0].innerHTML}</h5>
-                    <p class="shop__price">
-                        <span>${priceCost[0].innerHTML}</span> в месяц<i class="fas fa-trash"></i>
-                    </p>
-                </div>`;
-
-            let ul = document.querySelectorAll('.shop__ul');
-
-            ul.forEach(item => {
-                item.appendChild(li);
-            });
-
+                                <h5 class="shop__title">${priceTitle[0].innerText}</h5>
+                                <p class="shop__price">
+                                    $<span>${priceCost[0].innerText}</span> в месяц<i class="fas fa-trash"></i>
+                                </p>
+                            </div>`;
+    
+            
+            let ul = document.querySelector('.shop__ul');
+            ul.appendChild(li);
+    
             delPrice();
             updPrice();
             sumPrice();
         });
     });
+
+    function delPrice() {
+        let trash = document.querySelectorAll('.fa-trash');
+    
+        trash.forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                this.parentNode.parentNode.remove();            
+    
+                updPrice();
+                sumPrice();
+            })
+        });
+    }
+
+    function updPrice() {
+        let update = document.querySelectorAll('.shop__item').length;
+        let count = document.querySelectorAll('.shop__count');
+
+        count.forEach(item => {
+            item.innerHTML = update;
+            if (item.innerHTML == 0) {
+                item.style.display = "none";
+            } else if (item.innerHTML > 0) {
+                item.style.display = "block";
+            }
+        });
+    }
+    
+    function sumPrice() {
+        let priceCost = document.querySelectorAll('.shop__price span');
+        let count = 0;
+    
+        for (let i = 0; i < priceCost.length; i++) {
+            count += (+priceCost[i].textContent);
+        }
+    
+        document.querySelector('.total').innerHTML = `$${count}`;
+    }
 }
 
 getPrice();
-
-function delPrice() {
-    let trash = document.querySelectorAll('.fa-trash');
-
-    trash.forEach(item => {
-        item.addEventListener('click', function () {
-            this.parentNode.parentNode.remove();
-
-            updPrice();
-        })
-    });
-}
-
-function updPrice() {
-    let update = document.querySelectorAll('.shop__item').length;
-    document.querySelectorAll('.shop__count').forEach(item => {
-        item.innerHTML = update;
-    });
-}
-
-function sumPrice() {
-    let priceCost = document.querySelectorAll('.number');
-    let count = 0;
-
-    for (let i = 0; i < priceCost.length; i++) {
-        count += (+priceCost[i].textContent);
-    }
-
-    document.querySelector('.total').innerHTML = `$${count}`;
-}
 
 function subscribe() {
     let subscribeInput = document.querySelector('.subscribe__form input');
@@ -498,7 +549,7 @@ function getMap() {
     });
 }
 
-getMap();
+// getMap();
 
 function post() {
     let post = document.querySelector('.footer__form .btn');
