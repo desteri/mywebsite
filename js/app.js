@@ -528,13 +528,53 @@ function subscribe() {
 subscribe();
 
 function blogs() {
-    let blogs = document.querySelectorAll('.blogs .btn');
+    function getWorks() {
+        let getModal = document.querySelectorAll('.blogs__item a');
+        let visibleOverlay = document.querySelector('.blogs > .overlay');
+        let visibleModal = document.querySelectorAll('.blogs__modal');
+        let iframeModal = document.querySelectorAll('.yt_player_iframe');
+        let closeModal = document.querySelectorAll('.blogs__modal .modal__cross');
+    
+        getModal.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                visibleOverlay.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                let attr = item.getAttribute("class");
 
-    blogs.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
+                if (attr.includes('blog__one')) {
+                    visibleModal[0].style.display = 'block';
+                } else if (attr.includes('blog__two')) {
+                    visibleModal[1].style.display = 'block';
+                } else if (attr.includes('blog__three')) {
+                    visibleModal[2].style.display = 'block';
+                } else {
+                    console.log('no');
+                }
+            });
         });
-    });
+    
+        const click = () => {
+            visibleOverlay.style.display = 'none';
+            document.body.style.overflow = 'visible';
+    
+            for (let i = 0; i < visibleModal.length; i++) {
+                visibleModal[i].style.display = 'none';
+            }
+    
+            iframeModal.forEach(item => {
+                item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+            });
+        };
+    
+        closeModal.forEach(item => {
+            item.addEventListener('click', click);
+        });
+    
+        visibleOverlay.addEventListener('click', click);
+    }
+    
+    getWorks();
 }
 
 blogs();

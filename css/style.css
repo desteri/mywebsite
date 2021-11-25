@@ -272,7 +272,8 @@ nav {
     font-size: 14px;
 }
 
-.check__content .modal__cross {
+.check__content .modal__cross,
+.blogs__modal .modal__cross {
     color: #333333;
     font-size: clamp(14px, 3vw, 30px);
 }
@@ -1327,6 +1328,56 @@ header.fixed .nav__link:hover {
     padding: 10px 35px;
 }
 
+/* blogs__modal
+=====================*/
+.blogs__modal .modal__title,
+.blogs__modal .modal__text {
+    color: #333333;
+}
+
+.blogs__top,
+.blogs__bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.blogs__top .modal__text,
+.blogs__bottom .modal__text,
+.blogs__img {
+    width: 48%;
+}
+
+.blogs__modal iframe {
+    margin-bottom: 30px;
+}
+
+.blogs > .overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 8;
+}
+
+.blogs__modal {
+    display: none;
+    width: 100%;
+    max-height: calc(100% - 125px);
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    background-color: #f2f2f2;
+    z-index: 8;
+}
+
 /* map
 =====================*/
 .map iframe {display: none;}
@@ -1449,7 +1500,13 @@ footer textarea {display: block;}
 @media (max-width: 1024px) {
     .modal__product {
         width: 80%;
-    }    
+    }
+
+    .blogs__top .modal__text,
+    .blogs__bottom .modal__text,
+    .blogs__img {
+        width:100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1479,7 +1536,8 @@ footer textarea {display: block;}
 }
 
 @media (max-width: 425px) {
-    .works__modal iframe {
+    .works__modal iframe,
+    .blogs__modal iframe {
         height: 200px;
     }
 
