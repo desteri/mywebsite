@@ -1536,6 +1536,10 @@ footer textarea {display: block;}
 }
 
 @media (max-width: 425px) {
+    .video iframe {
+        height: 240px;
+    }
+
     .works__modal iframe,
     .blogs__modal iframe {
         height: 200px;
