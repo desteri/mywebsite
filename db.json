@@ -19,6 +19,23 @@
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas."
         }
     ],
+    "works": [
+        { 
+            "id": 1, 
+            "img": "./img/works/splash/work_1.png", 
+            "text": "FPS"
+        },
+        {
+            "id": 2,
+            "img": "./img/works/splash/work_2.png", 
+            "text": "RTS"
+        },
+        {
+            "id": 3,
+            "img": "./img/works/splash/work_3.png", 
+            "text": "RPG"
+        }
+    ],
     "services": [
         { 
             "id": 1,

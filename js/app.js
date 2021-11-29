@@ -181,9 +181,38 @@ function getVideo() {
     });
 }
 
-// getVideo();
+getVideo();
 
 function getWorks() {
+    const works = document.querySelector('.works__content');
+    
+    const render = async () => {
+        const result = await fetch('http://localhost:3000/works');
+        const worksItem = await result.json();
+
+        let worksItemTemplate = '';
+
+        for (let prop of worksItem) {
+            worksItemTemplate += `
+                <li class="works__item">
+                    <img src="${prop.img}" alt="service">
+
+                    <div class="overlay">
+                        <a class="works__link" href="#">${prop.text}</a>
+                    </div>
+                </li>
+            `
+        }
+
+        works.insertAdjacentHTML('afterbegin', worksItemTemplate);
+    };
+
+    window.addEventListener('DOMContentLoaded', () => render());
+}
+
+getWorks();
+
+function getWorksModal() {
     let getModal = document.querySelectorAll('.works__link');
     let visibleOverlay = document.querySelector('.works > .overlay');
     let visibleModal = document.querySelectorAll('.works__modal');
@@ -226,7 +255,7 @@ function getWorks() {
     visibleOverlay.addEventListener('click', click);
 }
 
-// getWorks();
+getWorksModal();
 
 function getServices() {
     const services = document.querySelector('.services__content');
@@ -697,7 +726,7 @@ function getBlogsModal() {
     visibleOverlay.addEventListener('click', click);
 }
 
-// getBlogsModal();
+getBlogsModal();
 
 function getMap() {
     let mapLink = document.querySelector('.map__link');
@@ -709,7 +738,7 @@ function getMap() {
     });
 }
 
-// getMap();
+getMap();
 
 function post() {
     let post = document.querySelector('.footer__form .btn');
