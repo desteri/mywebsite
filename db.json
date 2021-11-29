@@ -1,0 +1,136 @@
+{
+    "moreabout": [
+        { 
+            "id": 1,
+            "icon": "far fa-compass", 
+            "title": "Мы креативные", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas."
+        },
+        {
+            "id": 2,
+            "icon": "fas fa-comment",
+            "title": "Мы открытые",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas."
+        },
+        {
+            "id": 3,
+            "icon": "fas fa-heart",
+            "title": "Мы любим игры",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas."
+        }
+    ],
+    "services": [
+        { 
+            "id": 1,
+            "icon": "fas fa-lightbulb", 
+            "title": "Разработка с нуля", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+        },
+        {
+            "id": 2,
+            "icon": "fas fa-desktop",
+            "title": "Исходный код",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+        },
+        {
+            "id": 3,
+            "icon": "fas fa-sync-alt",
+            "title": "Сопровождение",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+        }
+    ],
+    "portfolio": [
+        { 
+            "id": 1,
+            "img": "./img/portfolio/Small/portfolioS_1.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=s_SJZSAtLBA"
+        },
+        {
+            "id": 2,
+            "img": "./img/portfolio/Small/portfolioS_2.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=X5aJfebzkrM"
+        },
+        {
+            "id": 3,
+            "img": "./img/portfolio/Small/portfolioS_3.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=c0i88t0Kacs"
+        },
+        {
+            "id": 4,
+            "img": "./img/portfolio/Small/portfolioS_4.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=wzx96gYA8ek"
+        },
+        {
+            "id": 5,
+            "img": "./img/portfolio/Small/portfolioS_5.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=iqysmS4lxwQ"
+        },
+        {
+            "id": 6,
+            "img": "./img/portfolio/Small/portfolioS_6.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=q38yi0NmAm0"
+        },
+        {
+            "id": 7,
+            "img": "./img/portfolio/Small/portfolioS_7.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=_zDZYrIUgKE"
+        },
+        {
+            "id": 8,
+            "img": "./img/portfolio/Small/portfolioS_8.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=9LL2AtHo1gk"
+        },
+        {
+            "id": 9,
+            "img": "./img/portfolio/Small/portfolioS_9.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=CtP6mNeN6yE"
+        },
+        {
+            "id": 10,
+            "img": "./img/portfolio/Small/portfolioS_10.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=vhII1qlcZ4E"
+        },
+        {
+            "id": 11,
+            "img": "./img/portfolio/Small/portfolioS_11.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=gX4cGcwmdsY"
+        },
+        {
+            "id": 12,
+            "img": "./img/portfolio/Small/portfolioS_12.png", 
+            "title": "Название продукта",
+            "href": "https://www.youtube.com/watch?v=4TjUPXAn2Rg"
+        }
+    ],
+    "blogs": [
+        { 
+            "id": 1,
+            "img": "./img/blogs/blog_1.png", 
+            "title": "Ежегодное конференц-собрание", 
+            "text": "25 Августа, 2021 / Руководство"
+        },
+        {
+            "id": 2,
+            "img": "./img/blogs/blog_2.png", 
+            "title": "Кинематография в движках", 
+            "text": "14 Октября, 2021 / CG-команда"
+        },
+        {
+            "id": 3,
+            "img": "./img/blogs/blog_3.png", 
+            "title": "Обновление и перезапуск игр", 
+            "text": "1 Декабря, 2021 / Команда IT"
+        }
+    ]
+}

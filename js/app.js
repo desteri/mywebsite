@@ -138,6 +138,39 @@ function accordionToggle() {
 
 accordionToggle();
 
+function getAbout() {
+    const moreAbout = document.querySelector('.moreabout__content');
+    
+    const render = async () => {
+        const result = await fetch('http://localhost:3000/moreabout');
+        const aboutItem = await result.json();
+
+        let aboutItemTemplate = '';
+
+        for (let prop of aboutItem) {
+            aboutItemTemplate += `
+                <li class="moreabout__item">
+                    <div class="moreabout__header">
+                        <div class="icon__circle">
+                            <i class="${prop.icon}"></i>
+                        </div>
+
+                        <h3 class="moreabout__title">${prop.title}</h3>
+                    </div>
+
+                    <p class="moreabout__text">${prop.text}</p>
+                </li>
+            `
+        }
+
+        moreAbout.insertAdjacentHTML('afterbegin', aboutItemTemplate);
+    };
+
+    window.addEventListener('DOMContentLoaded', () => render());
+}
+
+getAbout();
+
 function getVideo() {
     let videoLink = document.querySelector('.video__link');
     let video = document.querySelector('.video');
@@ -148,7 +181,7 @@ function getVideo() {
     });
 }
 
-getVideo();
+// getVideo();
 
 function getWorks() {
     let getModal = document.querySelectorAll('.works__link');
@@ -193,7 +226,34 @@ function getWorks() {
     visibleOverlay.addEventListener('click', click);
 }
 
-getWorks();
+// getWorks();
+
+function getServices() {
+    const services = document.querySelector('.services__content');
+    
+    const render = async () => {
+        const result = await fetch('http://localhost:3000/services');
+        const servicesItem = await result.json();
+
+        let servicesItemTemplate = '';
+
+        for (let prop of servicesItem) {
+            servicesItemTemplate += `
+                <li class="services__item">
+                    <i class="${prop.icon}"></i>
+                    <h3 class="services__title">${prop.title}</h3>
+                    <p class="services__text">${prop.text}</p>
+                </li>
+            `
+        }
+
+        services.insertAdjacentHTML('afterbegin', servicesItemTemplate);
+    };
+
+    window.addEventListener('DOMContentLoaded', () => render());
+}
+
+getServices();
 
 function hire() {
     let hire = document.querySelector('.hire .btn');
@@ -226,6 +286,43 @@ function hire() {
 hire();
 
 function getPortfolio() {
+    const portfolio = document.querySelector('.portfolio__content');
+    
+    const render = async () => {
+        const result = await fetch('http://localhost:3000/portfolio');
+        const portfolioItem = await result.json();
+
+        let portfolioItemTemplate = '';
+
+        for (let prop of portfolioItem) {
+            portfolioItemTemplate += `
+                <li class="portfolio__item">
+                    <img src="${prop.img}" alt="work">
+
+                    <div class="overlay">
+                        <div class="overlay__content">
+                            <h3 class="portfolio__title">${prop.title}</h3>
+
+                            <div class="portfolio__icon">
+                                <a class="portfolio__link portMod" href="#"><i class="fas fa-expand-alt"></i></a>
+                                <a class="portfolio__link" href="${prop.href}"
+                                    target="_blank"><i class="fas fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            `
+        }
+
+        portfolio.insertAdjacentHTML('afterbegin', portfolioItemTemplate);
+    };
+
+    window.addEventListener('DOMContentLoaded', () => render());
+}
+
+getPortfolio();
+
+function getPortfolioModal() {
     let getModal = document.querySelectorAll('.portMod');
     let visibleOverlay = document.querySelector('.portfolio > .overlay');
     let visibleModal = document.querySelectorAll('.modal__product');
@@ -297,7 +394,7 @@ function getPortfolio() {
     visibleOverlay.addEventListener('click', click);
 }
 
-getPortfolio();
+getPortfolioModal();
 
 function portfolioSlider() {
     let prev = document.querySelectorAll('.modal__product .slider__left'),
@@ -439,8 +536,7 @@ function reviews() {
 
 reviews();
 
-
-function getPrice() {
+function getPriceInShop() {
     let priceBtn = document.querySelectorAll('.add');
 
     priceBtn.forEach(item => {
@@ -508,7 +604,7 @@ function getPrice() {
     }
 }
 
-getPrice();
+getPriceInShop();
 
 function subscribe() {
     let subscribeInput = document.querySelector('.subscribe__form input');
@@ -527,57 +623,81 @@ function subscribe() {
 
 subscribe();
 
-function blogs() {
-    function getWorks() {
-        let getModal = document.querySelectorAll('.blogs__item a');
-        let visibleOverlay = document.querySelector('.blogs > .overlay');
-        let visibleModal = document.querySelectorAll('.blogs__modal');
-        let iframeModal = document.querySelectorAll('.yt_player_iframe');
-        let closeModal = document.querySelectorAll('.blogs__modal .modal__cross');
+function getBlogs() {
+    const blogs = document.querySelector('.blogs__content');
     
-        getModal.forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                visibleOverlay.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-                let attr = item.getAttribute("class");
+    const render = async () => {
+        const result = await fetch('http://localhost:3000/blogs');
+        const blogsItem = await result.json();
 
-                if (attr.includes('blog__one')) {
-                    visibleModal[0].style.display = 'block';
-                } else if (attr.includes('blog__two')) {
-                    visibleModal[1].style.display = 'block';
-                } else if (attr.includes('blog__three')) {
-                    visibleModal[2].style.display = 'block';
-                } else {
-                    console.log('no');
-                }
-            });
-        });
-    
-        const click = () => {
-            visibleOverlay.style.display = 'none';
-            document.body.style.overflow = 'visible';
-    
-            for (let i = 0; i < visibleModal.length; i++) {
-                visibleModal[i].style.display = 'none';
-            }
-    
-            iframeModal.forEach(item => {
-                item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
-            });
-        };
-    
-        closeModal.forEach(item => {
-            item.addEventListener('click', click);
-        });
-    
-        visibleOverlay.addEventListener('click', click);
-    }
-    
-    getWorks();
+        let blogsItemTemplate = '';
+
+        for (let prop of blogsItem) {
+            blogsItemTemplate += `
+                <li class="blogs__item">
+                    <img src="${prop.img}" alt="blog">
+                    <h3 class="blogs__title">${prop.title}</h3>
+                    <p class="blogs__text">${prop.text}</p>
+                    <a href="#" class="btn fully blog__two"><i class="fas fa-arrow-right"></i></a>
+                </li>
+            `
+        }
+
+        blogs.insertAdjacentHTML('afterbegin', blogsItemTemplate);
+    };
+
+    window.addEventListener('DOMContentLoaded', () => render());
 }
 
-blogs();
+getBlogs();
+
+function getBlogsModal() {
+    let getModal = document.querySelectorAll('.blogs__item a');
+    let visibleOverlay = document.querySelector('.blogs > .overlay');
+    let visibleModal = document.querySelectorAll('.blogs__modal');
+    let iframeModal = document.querySelectorAll('.yt_player_iframe');
+    let closeModal = document.querySelectorAll('.blogs__modal .modal__cross');
+
+    getModal.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            visibleOverlay.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            let attr = item.getAttribute("class");
+
+            if (attr.includes('blog__one')) {
+                visibleModal[0].style.display = 'block';
+            } else if (attr.includes('blog__two')) {
+                visibleModal[1].style.display = 'block';
+            } else if (attr.includes('blog__three')) {
+                visibleModal[2].style.display = 'block';
+            } else {
+                console.log('no');
+            }
+        });
+    });
+
+    const click = () => {
+        visibleOverlay.style.display = 'none';
+        document.body.style.overflow = 'visible';
+
+        for (let i = 0; i < visibleModal.length; i++) {
+            visibleModal[i].style.display = 'none';
+        }
+
+        iframeModal.forEach(item => {
+            item.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        });
+    };
+
+    closeModal.forEach(item => {
+        item.addEventListener('click', click);
+    });
+
+    visibleOverlay.addEventListener('click', click);
+}
+
+// getBlogsModal();
 
 function getMap() {
     let mapLink = document.querySelector('.map__link');
@@ -589,7 +709,7 @@ function getMap() {
     });
 }
 
-getMap();
+// getMap();
 
 function post() {
     let post = document.querySelector('.footer__form .btn');
