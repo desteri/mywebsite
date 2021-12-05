@@ -1,4 +1,37 @@
 {
+    "details": [
+        { 
+            "id": 1, 
+            "title": "Кто мы", 
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto modi ut rerum provident odio mollitia reprehenderit similique, a vel ex cupiditate aperiam porro numquam minus dolores excepturi fugit enim quos ad voluptates blanditiis obcaecati labore? Ex, asperiores eos excepturi culpa fugiat quia magni mollitia fuga cum tempore quos, officia sequi illum enim corrupti. Quis sed eos, nisi ducimus cum doloremque accusamus ipsa numquam distinctio explicabo obcaecati porro sequi pariatur deleniti cupiditate consequuntur perferendis ab aperiam ea temporibus excepturi! Iure temporibus, saepe hic consequuntur quis, molestiae impedit omnis sed, facilis eveniet minima dicta distinctio officia voluptatem vel nihil magnam. Officia deleniti laudantium ipsa atque cum illo nesciunt quae, inventore corrupti maxime modi. Corrupti explicabo tempore doloribus mollitia facere sunt inventore vitae harum numquam eaque! Rem quo nulla harum enim at eveniet atque labore delectus mollitia natus id repellat officia pariatur quas, non porro quis laborum cum. Sit dolore temporibus sed at laboriosam optio minima, accusantium dolorem iusto eaque doloribus maiores corrupti veritatis quisquam blanditiis sunt asperiores quidem nemo delectus obcaecati, deserunt quod ex, numquam iure! Laudantium saepe officia ipsum voluptates tenetur incidunt magni dolorum totam, quod sequi laboriosam officiis excepturi recusandae quis sit tempore quia quos aspernatur fugit? Neque, facere ab.",
+            "textMore": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia nam eius, quae quia deleniti ducimus unde dignissimos atque autem totam labore, in sequi ipsam et esse repudiandae officiis soluta facere omnis amet harum dolorum ex fuga libero. Totam in, porro mollitia consectetur rem repellat corporis, delectus similique deleniti earum magnam tempora. Modi, labore expedita dolorem aliquam voluptate laudantium natus voluptas tenetur distinctio delectus et autem dolore rerum deserunt corporis tempore possimus vel ipsam dolorum illum esse voluptatum veniam? Dignissimos sint voluptate recusandae, omnis eum iure blanditiis quia debitis officia id nisi asperiores itaque ratione animi atque aliquam et quo adipisci modi nesciunt quisquam. Dolor beatae maxime placeat ad voluptas nesciunt quae fugiat iusto fugit. Repudiandae sed consequuntur saepe, accusamus laboriosam, sit quas repellendus esse in labore vitae ad. Modi quam recusandae dolor nihil veniam eius, saepe rerum quasi, nam exercitationem voluptates quia expedita ipsa dolores neque sequi. Velit inventore eum odio reprehenderit mollitia quo, repudiandae optio earum ut officiis debitis placeat neque obcaecati. Iste officia neque asperiores illo temporibus reiciendis tempora aperiam quisquam facilis at quos perferendis atque, esse mollitia ipsa et exercitationem rerum natus, vero odio, nobis itaque. Tempora assumenda, quae dolorum nobis provident fugit! Officia facilis, iusto molestiae tempora atque magni nisi! Tempore reiciendis nam id rem voluptas quisquam eius, optio necessitatibus voluptatum veniam nulla iste recusandae ex explicabo fuga minima ipsam. Esse sit veritatis vel dolor ullam itaque ad, voluptate debitis temporibus voluptatibus cum unde. Id nemo expedita vitae deserunt debitis error necessitatibus, ab, reiciendis quas quibusdam suscipit explicabo, sunt ipsam distinctio rem labore! Ipsum voluptatum maxime blanditiis a corporis cupiditate placeat veniam eveniet ut aut facere ducimus asperiores impedit iste labore laudantium mollitia sapiente omnis atque ullam, ad quis. Incidunt cum, at cumque quas nemo asperiores, labore quod tempora, repudiandae voluptatem ea ducimus! A eveniet tenetur excepturi, adipisci commodi minus, voluptates vel quas corrupti iure rem nihil sunt quo fuga voluptatum! Ratione, tenetur! Veniam et nesciunt iste? Voluptas recusandae omnis quaerat et numquam ab nisi, consectetur quia dolorum voluptatem maxime beatae nobis rem ad repudiandae dolore! Quas soluta alias quidem sequi quisquam laboriosam. Corrupti explicabo adipisci itaque sequi cumque est ipsa, distinctio, repellendus inventore esse incidunt voluptate saepe. Animi eaque adipisci veritatis. Cumque beatae libero provident nostrum dolor blanditiis nulla doloribus quidem accusantium, sint sit aliquam porro hic ad commodi odio culpa quos soluta atque necessitatibus quae tempore dolores. Voluptatum esse tempore unde perspiciatis porro itaque.",
+            "imgOne": "./img/about/about_build.png",
+            "imgTwo": "./img/about/about_team1.png",
+            "imgThree": "./img/about/about_team2.png"
+        }
+    ],
+    "accordion": [
+        { 
+            "id": 1, 
+            "title": "Отличный сервис", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus turpis in eu mi bibendum neque egestas."
+        },
+        {
+            "id": 2,
+            "title": "Опытная команда",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus turpis in eu mi bibendum neque egestas."
+        },
+        {
+            "id": 3,
+            "title": "Уникальная разработка",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus turpis in eu mi bibendum neque egestas."
+        },
+        {
+            "id": 4,
+            "title": "Бесплатные обновления",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Sed faucibus turpis in eu mi bibendum neque egestas."
+        }
+    ],
     "moreabout": [
         { 
             "id": 1,
@@ -36,6 +69,35 @@
             "text": "RPG"
         }
     ],
+    "worksModal": [
+        { 
+            "id": 1,
+            "title": "First Person Shooter",
+            "src": "https://www.youtube.com/embed/6eMhs6VFG0o?rel=0&enablejsapi=1",
+            "imgOne": "./img/works/modal/modal_1.png",
+            "imgTwo": "./img/works/modal/modal_2.png", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est.",
+            "href": "https://ru.wikipedia.org/wiki/%D0%A8%D1%83%D1%82%D0%B5%D1%80_%D0%BE%D1%82_%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BB%D0%B8%D1%86%D0%B0"
+        },
+        {
+            "id": 2,
+            "title": "Real-Time Strategy",
+            "src": "https://www.youtube.com/embed/V4siz1KrnO0?rel=0&enablejsapi=1",
+            "imgOne": "./img/works/modal/modal_3.png",
+            "imgTwo": "./img/works/modal/modal_4.png", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est.",
+            "href": "https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F_%D0%B2_%D1%80%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC_%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8"
+        },
+        {
+            "id": 3,
+            "title": "Role-Playing Game",
+            "src": "https://www.youtube.com/embed/qp8llWcWrc0?rel=0&enablejsapi=1",
+            "imgOne": "./img/works/modal/modal_5.png",
+            "imgTwo": "./img/works/modal/modal_6.png", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est.",
+            "href": "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D0%B8%D0%B3%D1%80%D0%B0"
+        }
+    ],
     "services": [
         { 
             "id": 1,
@@ -54,6 +116,53 @@
             "icon": "fas fa-sync-alt",
             "title": "Сопровождение",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+        }
+    ],
+    "hire": [
+        { 
+            "id": 1,
+            "img": "./img/hire/modal/hire_modal_1.png", 
+            "name": "Изменить имя", 
+            "pos": "Позиция",
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "instagram": "https://www.instagram.com/"
+        },
+        {
+            "id": 2,
+            "img": "./img/hire/modal/hire_modal_2.png", 
+            "name": "Изменить имя", 
+            "pos": "Позиция",
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "instagram": "https://www.instagram.com/"
+        },
+        {
+            "id": 3,
+            "img": "./img/hire/modal/hire_modal_3.png", 
+            "name": "Изменить имя", 
+            "pos": "Позиция",
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "instagram": "https://www.instagram.com/"
+        },
+        {
+            "id": 4,
+            "img": "./img/hire/modal/hire_modal_4.png", 
+            "name": "Изменить имя", 
+            "pos": "Позиция",
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "instagram": "https://www.instagram.com/"
+        },
+        {
+            "id": 5,
+            "img": "./img/hire/modal/hire_modal_5.png", 
+            "name": "Изменить имя", 
+            "pos": "Позиция",
+            "facebook": "https://www.facebook.com/",
+            "twitter": "https://twitter.com/",
+            "instagram": "https://www.instagram.com/"
         }
     ],
     "portfolio": [
@@ -130,24 +239,309 @@
             "href": "https://www.youtube.com/watch?v=4TjUPXAn2Rg"
         }
     ],
+    "portfolioContent": [
+        { 
+            "id": 1,
+            "slider": "slider-one",
+            "imgOne": "./img/portfolio/Large/aco/aco1.png", 
+            "imgTwo": "./img/portfolio/Large/aco/aco2.png", 
+            "imgThree": "./img/portfolio/Large/aco/aco3.png", 
+            "imgFour": "./img/portfolio/Large/aco/aco4.png", 
+            "imgFive": "./img/portfolio/Large/aco/aco5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 2,
+            "slider": "slider-two",
+            "imgOne": "./img/portfolio/Large/f4/f41.png", 
+            "imgTwo": "./img/portfolio/Large/f4/f42.png", 
+            "imgThree": "./img/portfolio/Large/f4/f43.png", 
+            "imgFour": "./img/portfolio/Large/f4/f44.png", 
+            "imgFive": "./img/portfolio/Large/f4/f45.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 3,
+            "slider": "slider-three",
+            "imgOne": "./img/portfolio/Large/w3wh/w3wh1.png", 
+            "imgTwo": "./img/portfolio/Large/w3wh/w3wh2.png", 
+            "imgThree": "./img/portfolio/Large/w3wh/w3wh3.png", 
+            "imgFour": "./img/portfolio/Large/w3wh/w3wh4.png", 
+            "imgFive": "./img/portfolio/Large/w3wh/w3wh5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 4,
+            "slider": "slider-four",
+            "imgOne": "./img/portfolio/Large/hzd/hzd1.png", 
+            "imgTwo": "./img/portfolio/Large/hzd/hzd2.png", 
+            "imgThree": "./img/portfolio/Large/hzd/hzd3.png", 
+            "imgFour": "./img/portfolio/Large/hzd/hzd4.png", 
+            "imgFive": "./img/portfolio/Large/hzd/hzd5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 5,
+            "slider": "slider-five",
+            "imgOne": "./img/portfolio/Large/gt/gt1.png", 
+            "imgTwo": "./img/portfolio/Large/gt/gt2.png", 
+            "imgThree": "./img/portfolio/Large/gt/gt3.png", 
+            "imgFour": "./img/portfolio/Large/gt/gt4.png", 
+            "imgFive": "./img/portfolio/Large/gt/gt5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 6,
+            "slider": "slider-six",
+            "imgOne": "./img/portfolio/Large/p/p1.png", 
+            "imgTwo": "./img/portfolio/Large/p/p2.png", 
+            "imgThree": "./img/portfolio/Large/p/p3.png", 
+            "imgFour": "./img/portfolio/Large/p/p4.png", 
+            "imgFive": "./img/portfolio/Large/p/p5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 7,
+            "slider": "slider-seven",
+            "imgOne": "./img/portfolio/Large/ds3/ds31.png", 
+            "imgTwo": "./img/portfolio/Large/ds3/ds32.png", 
+            "imgThree": "./img/portfolio/Large/ds3/ds33.png", 
+            "imgFour": "./img/portfolio/Large/ds3/ds34.png", 
+            "imgFive": "./img/portfolio/Large/ds3/ds35.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 8,
+            "slider": "slider-eight",
+            "imgOne": "./img/portfolio/Large/ugg/ugg1.png", 
+            "imgTwo": "./img/portfolio/Large/ugg/ugg2.png", 
+            "imgThree": "./img/portfolio/Large/ugg/ugg3.png", 
+            "imgFour": "./img/portfolio/Large/ugg/ugg4.png", 
+            "imgFive": "./img/portfolio/Large/ugg/ugg5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 9,
+            "slider": "slider-nine",
+            "imgOne": "./img/portfolio/Large/pt/pt1.png", 
+            "imgTwo": "./img/portfolio/Large/pt/pt2.png", 
+            "imgThree": "./img/portfolio/Large/pt/pt3.png", 
+            "imgFour": "./img/portfolio/Large/pt/pt4.png", 
+            "imgFive": "./img/portfolio/Large/pt/pt5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 10,
+            "slider": "slider-ten",
+            "imgOne": "./img/portfolio/Large/tlou2/tlou21.png", 
+            "imgTwo": "./img/portfolio/Large/tlou2/tlou22.png", 
+            "imgThree": "./img/portfolio/Large/tlou2/tlou23.png", 
+            "imgFour": "./img/portfolio/Large/tlou2/tlou24.png", 
+            "imgFive": "./img/portfolio/Large/tlou2/tlou25.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 11,
+            "slider": "slider-eleven",
+            "imgOne": "./img/portfolio/Large/dc/dc1.png", 
+            "imgTwo": "./img/portfolio/Large/dc/dc2.png", 
+            "imgThree": "./img/portfolio/Large/dc/dc3.png", 
+            "imgFour": "./img/portfolio/Large/dc/dc4.png", 
+            "imgFive": "./img/portfolio/Large/dc/dc5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        },
+        {
+            "id": 12,
+            "slider": "slider-twelve",
+            "imgOne": "./img/portfolio/Large/c/c1.png", 
+            "imgTwo": "./img/portfolio/Large/c/c2.png", 
+            "imgThree": "./img/portfolio/Large/c/c3.png", 
+            "imgFour": "./img/portfolio/Large/c/c4.png", 
+            "imgFive": "./img/portfolio/Large/c/c5.png", 
+            "title": "Название продукта",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia accusantium tempora nisi sed error earum quasi, natus asperiores impedit, animi quas quidem alias enim velit ipsa a. Placeat quos ipsum non maiores adipisci? Temporibus dolorem earum animi. Error, dicta? Quis magni est cumque, sapiente iste consequuntur quam atque eveniet unde non id totam. Laboriosam nesciunt earum quae! Necessitatibus sed eius corporis impedit blanditiis dolorum fuga accusamus consectetur repellat ad commodi iusto consequatur beatae ipsum eaque, quidem animi veritatis ab alias suscipit eos? Tenetur facere earum non fugiat repudiandae? Rem eaque nulla architecto deleniti impedit similique vero tempora."
+        }
+    ],
+    "achieve": [
+        { 
+            "id": 1,
+            "number": 57, 
+            "text": "Завершенных проектов"
+        },
+        {
+            "id": 2,
+            "number": 198, 
+            "text": "Счастливых клиентов"
+        },
+        {
+            "id": 3,
+            "number": 1236, 
+            "text": "Рабочих дней"
+        },
+        {
+            "id": 4,
+            "number": 856, 
+            "text": "Чашек кофе"
+        }
+    ],
+    "reviews": [
+        { 
+            "id": 1,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis", 
+            "author": "Хидэтака Миядзаки - FromSoftware"
+        },
+        {
+            "id": 2,
+            "text": "Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida", 
+            "author": "Тодд Говард - Bethesda Game Studios"
+        },
+        {
+            "id": 3,
+            "text": "Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis", 
+            "author": "Хидео Кодзима - Kojima Productions"
+        }
+    ],
+    "price": [
+        { 
+            "id": 1,
+            "title": "FPS", 
+            "number": 1499,
+            "include": [
+                {
+                    "textOne": "DLC",
+                    "textTwo": "Сетевая игра",
+                    "textThree": "Плюшки",
+                    "iconOne": "fa-check-circle",
+                    "iconTwo": "fa-times-circle",
+                    "iconThree": "fa-times-circle"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "RTS", 
+            "number": 2499,
+            "include": [
+                {
+                    "textOne": "DLC",
+                    "textTwo": "Сетевая игра",
+                    "textThree": "Плюшки",
+                    "iconOne": "fa-check-circle",
+                    "iconTwo": "fa-check-circle",
+                    "iconThree": "fa-times-circle"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "RPG", 
+            "number": 5499,
+            "include": [
+                {
+                    "textOne": "DLC",
+                    "textTwo": "Сетевая игра",
+                    "textThree": "Плюшки",
+                    "iconOne": "fa-check-circle",
+                    "iconTwo": "fa-check-circle",
+                    "iconThree": "fa-check-circle"
+                }
+            ]
+        }
+    ],
+    "brands": [
+        { 
+            "id": 1,
+            "href": "https://www.ea.com/frostbite", 
+            "img": "./img/brands/frostbite.svg", 
+            "alt": "logo frostbite"
+        },
+        {
+            "id": 2,
+            "href": "https://www.blender.org/", 
+            "img": "./img/brands/blender.svg", 
+            "alt": "logo blender"
+        },
+        {
+            "id": 3,
+            "href": "https://www.unrealengine.com/en-US/", 
+            "img": "./img/brands/unreal-engine.svg", 
+            "alt": "logo unreal-engine"
+        },
+        {
+            "id": 4,
+            "href": "https://unity.com/ru", 
+            "img": "./img/brands/unity.svg", 
+            "alt": "logo unity"
+        },
+        {
+            "id": 5,
+            "href": "https://www.substance3d.com/", 
+            "img": "./img/brands/substance-painter.svg", 
+            "alt": "logo substance-painter"
+        },
+        {
+            "id": 6,
+            "href": "https://pixologic.com/", 
+            "img": "./img/brands/zbrush.svg", 
+            "alt": "logo zbrush"
+        }
+    ],
     "blogs": [
         { 
             "id": 1,
             "img": "./img/blogs/blog_1.png", 
             "title": "Ежегодное конференц-собрание", 
-            "text": "25 Августа, 2021 / Руководство"
+            "text": "25 Августа, 2021 / Руководство",
+            "number": "blog__one"
         },
         {
             "id": 2,
             "img": "./img/blogs/blog_2.png", 
             "title": "Кинематография в движках", 
-            "text": "14 Октября, 2021 / CG-команда"
+            "text": "14 Октября, 2021 / CG-команда",
+            "number": "blog__two"
         },
         {
             "id": 3,
             "img": "./img/blogs/blog_3.png", 
             "title": "Обновление и перезапуск игр", 
-            "text": "1 Декабря, 2021 / Команда IT"
+            "text": "1 Декабря, 2021 / Команда IT",
+            "number": "blog__three"
+        }
+    ],
+    "blogsContent": [
+        { 
+            "id": 1,
+            "title": "Ежегодное конференц-собрание",
+            "imgOne": "./img/blogs/modal/blogs_modal_1_1.png",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est.",
+            "imgTwo": "./img/blogs/modal/blogs_modal_1_2.png"
+        },
+        {
+            "id": 2,
+            "title": "Кинематография в движках",
+            "img": "./img/blogs/modal/blogs_modal_2.png",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est.",
+            "src": "https://www.youtube.com/embed/d1ZnM7CH-v4?rel=0&enablejsapi=1"
+        },
+        {
+            "id": 3,
+            "title": "Обновление и перезапуск игр",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed faucibus turpis in eu mi bibendum neque egestas. Purus ut faucibus pulvinar elementum. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est. Tempus iaculis urna id volutpat lacus laoreet. Senectus et netus et malesuada fames ac. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Eu facilisis sed odio morbi. Non consectetur a erat nam at lectus urna duis convallis. Lectus arcu bibendum at varius vel pharetra vel turpis. Hendrerit dolor magna eget est.",
+            "imgOne": "./img/blogs/modal/blogs_modal_3_1.png",
+            "imgTwo": "./img/blogs/modal/blogs_modal_3_2.png",
+            "imgThree": "./img/blogs/modal/blogs_modal_3_3.png"
         }
     ]
 }
